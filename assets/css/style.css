@@ -1,8 +1,31 @@
-body {
-    scroll-behavior: smooth;
-    font-family: 'Outfit', sans-serif;
-}
+ body {
+     scroll-behavior: smooth;
+     font-family: "Outfit", sans-serif;
+ }
 
-header {
-    transition: transform 0.3s ease-in-out;
-}
+ .navwrapper {
+     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     will-change: transform;
+ }
+
+ .group:hover .group-hover\:flex,
+ .group:focus .group-hover\:flex {
+     display: flex !important;
+ }
+
+ .group-hover\:flex {
+     display: none !important;
+ }
+
+ .fade-dropdown {
+     opacity: 0;
+     transition: opacity 0.25s ease-in-out;
+     pointer-events: none;
+ }
+
+ .group:hover .fade-dropdown,
+ .group:focus .fade-dropdown {
+     opacity: 1;
+     pointer-events: auto;
+     display: flex !important;
+ }

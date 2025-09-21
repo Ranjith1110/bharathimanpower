@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bharathi Manpower</title>
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -13,43 +15,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <style>
-        body {
-            scroll-behavior: smooth;
-            font-family: "Outfit", sans-serif;
-        }
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-        .navwrapper {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            will-change: transform;
-        }
-
-        .group:hover .group-hover\:flex,
-        .group:focus .group-hover\:flex {
-            display: flex !important;
-        }
-
-        .group-hover\:flex {
-            display: none !important;
-        }
-
-        .fade-dropdown {
-            opacity: 0;
-            transition: opacity 0.25s ease-in-out;
-            pointer-events: none;
-        }
-
-        .group:hover .fade-dropdown,
-        .group:focus .fade-dropdown {
-            opacity: 1;
-            pointer-events: auto;
-            display: flex !important;
-        }
-    </style>
 </head>
 
 <body class="bg-gray-50">
 
+    <!-- Navbar start -->
     <div id="navwrapper" class="fixed top-0 left-0 w-full z-50 navwrapper shadow-md bg-white">
         <!-- Top info bar desktop/tablet/large -->
         <div
@@ -102,9 +75,10 @@
             </button>
         </header>
     </div>
-    <div class="h-[104px]"></div> <!-- spacer for fixed nav -->
+    <div class="h-[104px]"></div>
+    <!-- Navbar end -->
 
-    <!-- Mobile Sidebar Menu -->
+    <!-- Mobile Sidebar Menu start -->
     <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/60 opacity-0 invisible transition-opacity duration-300">
         <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl rounded-l-2xl overflow-y-auto transition-transform duration-500 transform translate-x-full"
             id="menu-panel">
@@ -158,56 +132,64 @@
             </div>
         </div>
     </div>
+    <!-- Mobile Sidebar Menu end -->
 
 
-    <!-- Example Sections -->
-    <section id="about" class="h-screen flex items-center justify-center bg-gray-50">
-        <h1 class="text-4xl font-bold text-red-900">About Section</h1>
+    <section id="hero"
+        class="min-h-[85vh] max-h-[700px] max-w-7xl mx-auto mt-10 md:mt-0 grid grid-cols-1 md:grid-cols-12 items-center px-6 md:px-12 bg-gray-50 gap-8">
+        <!-- Left Content -->
+        <div class="md:col-span-7 flex flex-col space-y-6 max-w-xl mx-auto md:mx-0" data-aos="fade-right" data-aos-delay="100">
+            <h1 id="typing-headline"
+                class="text-4xl md:text-5xl font-extrabold text-red-900 leading-tight min-h-[5.5rem] border-l-4 border-red-600 pl-4">
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+                Empowering businesses and professionals to thrive
+            </p>
+            <div class="flex flex-wrap gap-6">
+                <button
+                    class="flex items-center bg-red-900 text-white font-semibold px-6 py-3 rounded shadow hover:bg-gradient-to-r hover:from-red-700 hover:to-red-900 transition">
+                    Get Started
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+                <button
+                    class="flex items-center border border-red-600 text-red-700 font-semibold px-6 py-3 rounded hover:bg-red-50 hover:text-red-900 transition">
+                    Learn More
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Right Image -->
+        <div
+            class="md:col-span-5 relative w-full max-w-lg mx-auto md:mx-0 h-[400px] rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <img src="/assets/images/demo.jpg" alt="Hero Image" class="w-full h-full object-cover" />
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent pointer-events-none rounded-lg">
+            </div>
+        </div>
     </section>
-    <section id="products" class="h-screen flex items-center justify-center bg-gray-100">
-        <h1 class="text-4xl font-bold text-red-900">Products Section</h1>
-    </section>
-    <section id="contact" class="h-screen flex items-center justify-center bg-gray-200">
-        <h1 class="text-4xl font-bold text-red-900">Contact Section</h1>
-    </section>
+
+
+
+    <!-- External JS -->
+    <script src="/assets/js/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        lucide.createIcons();
-        const mobileMenu = document.getElementById("mobile-menu");
-        const menuBtn = document.getElementById("menu-btn");
-        function toggleMenu() {
-            const isOpen = mobileMenu.classList.contains("opacity-100");
-            if (isOpen) {
-                mobileMenu.classList.remove("opacity-100", "visible");
-                mobileMenu.classList.add("opacity-0", "invisible");
-                mobileMenu.firstElementChild.classList.add("translate-x-full");
-            } else {
-                mobileMenu.classList.remove("opacity-0", "invisible");
-                mobileMenu.classList.add("opacity-100", "visible");
-                mobileMenu.firstElementChild.classList.remove("translate-x-full");
-            }
-        }
-        menuBtn.addEventListener("click", toggleMenu);
-        mobileMenu.addEventListener("click", (e) => e.target === mobileMenu && toggleMenu());
-        let lastScroll = window.pageYOffset;
-        let ticking = false;
-        const navwrapper = document.getElementById("navwrapper");
-        window.addEventListener("scroll", () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const currentScroll = window.pageYOffset;
-                    if (currentScroll > lastScroll && currentScroll > 50) {
-                        navwrapper.classList.add("-translate-y-full");
-                    } else {
-                        navwrapper.classList.remove("-translate-y-full");
-                    }
-                    lastScroll = currentScroll;
-                    ticking = false;
-                });
-                ticking = true;
-            }
+        AOS.init({
+            duration: 1000, // animation duration
+            once: true,     // whether animation should happen only once - while scrolling down
         });
-        document.body.style.overflowX = "hidden";
     </script>
+
 </body>
 
 </html>
