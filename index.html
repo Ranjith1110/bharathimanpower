@@ -22,6 +22,7 @@
 
 <body class="bg-gray-50">
 
+
     <!-- Navbar start -->
     <div id="navwrapper" class="fixed top-0 left-0 w-full z-50 navwrapper shadow-md bg-white">
         <!-- Top info bar desktop/tablet/large -->
@@ -135,10 +136,12 @@
     <!-- Mobile Sidebar Menu end -->
 
 
+    <!-- Hero section start -->
     <section id="hero"
         class="min-h-[85vh] max-h-[700px] max-w-7xl mx-auto mt-10 md:mt-0 grid grid-cols-1 md:grid-cols-12 items-center px-6 md:px-12 bg-gray-50 gap-8">
         <!-- Left Content -->
-        <div class="md:col-span-7 flex flex-col space-y-6 max-w-xl mx-auto md:mx-0" data-aos="fade-right" data-aos-delay="100">
+        <div class="md:col-span-7 flex flex-col space-y-6 max-w-xl mx-auto md:mx-0" data-aos="fade-right"
+            data-aos-delay="100">
             <h1 id="typing-headline"
                 class="text-4xl md:text-5xl font-extrabold text-red-900 leading-tight min-h-[5.5rem] border-l-4 border-red-600 pl-4">
             </h1>
@@ -168,15 +171,96 @@
             </div>
         </div>
         <!-- Right Image -->
-        <div
-            class="md:col-span-5 relative w-full max-w-lg mx-auto md:mx-0 h-[400px] rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="md:col-span-5 relative w-full max-w-lg mx-auto md:mx-0 h-[400px] rounded-lg shadow-lg overflow-hidden"
+            data-aos="fade-up" data-aos-delay="200">
             <img src="/assets/images/demo.jpg" alt="Hero Image" class="w-full h-full object-cover" />
             <div
                 class="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent pointer-events-none rounded-lg">
             </div>
         </div>
     </section>
+    <!-- Hero section end -->
 
+
+    <!-- What Makes Us Different start -->
+    <section class="bg-gray-50 py-24 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="relative flex items-center justify-center mt-12 lg:mt-0" data-aos="fade-right" data-aos-delay="200">
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                    <img src="/assets/images/demo.jpg" alt="Our team working together"
+                        class="w-full h-auto max-h-[500px] object-cover rounded-xl">
+                </div>
+                <div
+                    class="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-orange-100 to-red-100 rounded-full opacity-50 -z-10">
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg opacity-50 -z-10 transform -rotate-12">
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    What Makes <span
+                        class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">Us
+                        Different?</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-12">
+                    We do more than fill vacancies — we build lasting partnerships. Our approach ensures we truly
+                    understand your needs, delivering solutions that grow with your business.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-4 bg-red-50 rounded-full mb-5">
+                            <i data-lucide="users" class="w-6 h-6 text-[#720000]"></i>
+                        </div>
+                        <p class="text-3xl font-extrabold text-gray-900">100K+</p>
+                        <p class="text-gray-500 mt-1">Vetted Candidates</p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-4 bg-red-50 rounded-full mb-5">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-[#720000]"></i>
+                        </div>
+                        <p class="text-3xl font-extrabold text-gray-900">20K+</p>
+                        <p class="text-gray-500 mt-1">Active Associates</p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-4 bg-red-50 rounded-full mb-5">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-[#720000]"></i>
+                        </div>
+                        <p class="text-3xl font-extrabold text-gray-900">1.5K+</p>
+                        <p class="text-gray-500 mt-1">Deployment Locations</p>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-4 bg-red-50 rounded-full mb-5">
+                            <i data-lucide="smile" class="w-6 h-6 text-[#720000]"></i>
+                        </div>
+                        <p class="text-3xl font-extrabold text-gray-900">300+</p>
+                        <p class="text-gray-500 mt-1">Happy Clients</p>
+                    </div>
+                </div>
+
+                <script src="https://unpkg.com/lucide@latest"></script>
+                <script>
+                    lucide.createIcons();
+                </script>
+            </div>
+
+        </div>
+    </section>
+    <!-- What Makes Us Different end -->
+
+
+    
 
 
     <!-- External JS -->

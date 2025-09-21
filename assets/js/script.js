@@ -1,7 +1,9 @@
 
+// -- Initialize Lucide icons -- //
+lucide.createIcons();
+
 // -- For toggle navbar start -- //
 
-lucide.createIcons();
 const mobileMenu = document.getElementById("mobile-menu");
 const menuBtn = document.getElementById("menu-btn");
 function toggleMenu() {
