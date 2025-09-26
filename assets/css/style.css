@@ -3,6 +3,11 @@
      font-family: "Outfit", sans-serif;
  }
 
+ body::selection {
+     background-color: #720000;
+     color: white;
+ }
+
  .navwrapper {
      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
      will-change: transform;
@@ -29,4 +34,43 @@
      pointer-events: auto;
      display: flex !important;
  }
- 
+
+
+ .service-card {
+     transition: transform 0.4s cubic-bezier(.34, 1.56, .64, 1), box-shadow 0.4s cubic-bezier(.34, 1.56, .64, 1);
+     width: 100%;
+     max-width: 180px;
+     min-height: 170px;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     box-sizing: border-box;
+ }
+
+ @media (min-width: 768px) {
+     .service-card {
+         min-height: 200px;
+         max-width: 210px;
+     }
+ }
+
+ .icon-default {
+     color: #720000;
+     transition: transform 0.3s ease, color 0.3s ease;
+ }
+
+ .service-card:hover .icon-default {
+     color: #004aad;
+     transform: scale(1.2) rotate(5deg);
+ }
+
+ .service-card:hover h4 {
+     color: #004aad;
+ }
+
+ /* Hide Swiper default arrow icons */
+ .swiper-button-prev:after,
+ .swiper-button-next:after {
+     display: none;
+ }

@@ -2,116 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Our Services — Bharathi Manpower</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-red': '#A91D3A',
-                    }
-                }
-            }
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Outfit font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .service-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-    </script>
+
+        .service-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-default {
+            color: #720000;
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover .icon-default,
+        .service-card:hover h4 {
+            color: #004aad;
+        }
+    </style>
 </head>
 
-<body class="bg-white flex items-center justify-center min-h-screen">
+<body class="font-[Outfit] bg-gray-50">
 
-    <section class="py-20 px-6 w-full">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">
-                Our <span class="text-brand-red">Services</span>
-            </h2>
+    <!-- Services Start -->
+    <section class="w-full py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-12 gap-8">
 
-            <div class="relative w-full max-w-4xl mx-auto mt-16 h-[500px] hidden md:block">
-
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-house-chimney-crack fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Turnkey Solutions</p>
+                <!-- Left content -->
+                <div class="lg:col-span-5 flex flex-col justify-center bg-[#720000] p-8 text-white rounded-lg">
+                    <h1 class="text-4xl font-bold mb-5">
+                        Our <span class="bg-white text-[#720000] px-2 uppercase">Services</span>
+                    </h1>
+                    <h4 class="text-xl">
+                        <span class="text-6xl font-extrabold">8</span> services we provide
+                    </h4>
                 </div>
 
-                <div class="absolute top-[20%] right-[10%] flex flex-col items-center gap-2 w-48 text-center">
-                    <i class="fa-solid fa-user-check fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Assessment and Testing Services</p>
-                </div>
+                <!-- Right content -->
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <div
-                    class="absolute top-1/2 right-0 -translate-y-1/2 flex flex-col items-center gap-2 w-52 text-center">
-                    <i class="fa-solid fa-credit-card fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Payroll and Contract Staffing Solutions</p>
-                </div>
+                        <!-- Service 1 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="users" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Permanent Staffing</h4>
+                        </div>
 
-                <div class="absolute bottom-[20%] right-[15%] flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-graduation-cap fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Training</p>
-                </div>
+                        <!-- Service 2 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="briefcase" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Payroll & Contract Staffing</h4>
+                        </div>
 
-                <div
-                    class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-plane-departure fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Permanent Migration</p>
-                </div>
+                        <!-- Service 3 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="layers" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Vendor Management</h4>
+                        </div>
 
-                <div class="absolute bottom-[20%] left-[15%] flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-book-open-reader fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Student Recruitment</p>
-                </div>
+                        <!-- Service 4 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="search" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Executive / Retained Search</h4>
+                        </div>
 
-                <div class="absolute top-1/2 left-0 -translate-y-1/2 flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-users fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Bulk Recruitment</p>
-                </div>
+                        <!-- Service 5 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="file-text" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Payroll Outsourcing / HR</h4>
+                        </div>
 
-                <div class="absolute top-[20%] left-[10%] flex flex-col items-center gap-2 w-40 text-center">
-                    <i class="fa-solid fa-magnifying-glass fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Executive Search</p>
+                        <!-- Service 6 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="check-circle" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Assessment & Testing</h4>
+                        </div>
+
+                        <!-- Service 7 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="book-open" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Training</h4>
+                        </div>
+
+                        <!-- Service 8 -->
+                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
+                            <i data-lucide="graduation-cap" class="icon-default w-12 h-12 mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900">Student Recruitment</h4>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-12 mt-16 md:hidden">
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-house-chimney-crack fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Turnkey Solutions</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-user-check fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Assessment and Testing Services</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-credit-card fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Payroll and Contract Staffing Solutions</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-graduation-cap fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Training</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-plane-departure fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Permanent Migration</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-book-open-reader fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Student Recruitment</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-users fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Bulk Recruitment</p>
-                </div>
-                <div class="flex flex-col items-center gap-2 text-center">
-                    <i class="fa-solid fa-magnifying-glass fa-3x text-brand-red"></i>
-                    <p class="font-semibold text-gray-700">Executive Search</p>
-                </div>
-            </div>
-
         </div>
     </section>
+    <!-- Services End -->
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
