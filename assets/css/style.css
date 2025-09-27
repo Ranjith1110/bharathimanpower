@@ -74,3 +74,18 @@
  .swiper-button-next:after {
      display: none;
  }
+
+
+ @keyframes wireframeShift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+.animate-wireframe {
+  position: relative;
+  animation: wireframeShift 15s infinite ease-in-out;
+}

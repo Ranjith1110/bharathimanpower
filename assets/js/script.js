@@ -42,39 +42,5 @@ document.body.style.overflowX = "hidden";
 
 // -- For toggle navbar end -- //
 
-// -- Typing animation for headline start -- //
-
-const headline = "Your Growth/Your talent, Our Expertise.";
-const typingHeadline = document.getElementById("typing-headline");
-let index = 0;
-function type() {
-    if (index < headline.length) {
-        typingHeadline.textContent += headline.charAt(index);
-        index++;
-        setTimeout(type, 100);
-    }
-}
-type();
-
-// -- Typing animation for headline end -- //
 
 
-// -- Swiper for industry section start -- //
-
-new Swiper('.industry-swiper', {
-    slidesPerView: 2,
-    spaceBetween: 18,
-    breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 18 },     // Mobile (≤ 640px): 2 cards
-        768: { slidesPerView: 4, spaceBetween: 22 },     // iPad/Tablet (≥ 768px): 4 cards
-        1200: { slidesPerView: 6, spaceBetween: 24 },    // Desktop/Large (≥ 1200px): 6 cards
-    },
-    loop: true,
-    autoplay: { delay: 1700, disableOnInteraction: false },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    }
-});
-
-// -- Swiper for industry section end -- //

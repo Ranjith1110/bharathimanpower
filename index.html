@@ -150,33 +150,84 @@
 
 
     <!-- Hero section start -->
-    <section id="hero"
-        class="min-h-[85vh] max-h-[700px] max-w-7xl mx-auto mt-10 md:mt-0 grid grid-cols-1 md:grid-cols-12 items-center px-6 md:px-12 bg-gray-50 gap-8">
-        <!-- Left Content -->
-        <div class="md:col-span-5 flex flex-col space-y-6 max-w-xl mx-auto md:mx-0" data-aos="fade-right"
-            data-aos-delay="100">
-            <h1 id="typing-headline"
-                class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent leading-tight min-h-[5.5rem] border-l-4 border-[#720000] pl-4">
-            </h1>
-            <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+    <section class="max-w-7xl mx-auto mt-10 md:mt-0 px-6 md:px-12 bg-gray-50 py-6 md:py-12">
+
+        <!-- Border Animation -->
+        <div class="absolute inset-0 -z-10 pointer-events-none opacity-30 animate-wireframe">
+            <div class="w-full h-full bg-transparent border border-gray-400 border-opacity-10 grid grid-cols-10 gap-0">
+                <!-- Vertical lines: 10 lines -->
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+                <span class="border-r border-gray-400 border-opacity-30 h-full"></span>
+            </div>
+            <div
+                class="w-full h-full bg-transparent border border-gray-400 border-opacity-10 grid grid-rows-10 gap-0 absolute top-0 left-0 pointer-events-none">
+                <!-- Horizontal lines: 10 lines -->
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+                <span class="border-b border-gray-400 border-opacity-30 w-full"></span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-8">
+            <!-- LEFT COLUMN -->
+            <div class="md:col-span-3 flex flex-col items-center md:items-end space-y-3">
+                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-right">Your
+                    Workforce,</span>
+                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-right">Our
+                    Responsibility.</span>
+            </div>
+            <!-- CENTER IMAGE -->
+            <div class="md:col-span-6 flex justify-center items-center">
+                <div
+                    class="relative flex items-center justify-center overflow-hidden rounded-lg max-w-[90vw] w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+                    <img src="/assets/images/banner.png" alt="Hero"
+                        class="w-full h-auto object-contain rounded-lg transition-all duration-300" />
+                </div>
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="md:col-span-3 flex flex-col items-center md:items-start space-y-3">
+                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-left">Step
+                    Into</span>
+                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-left">Your
+                    Future With Us.</span>
+            </div>
+        </div>
+        <!-- BOTTOM ROW -->
+        <div class="mt-10 flex flex-col items-center w-full">
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-700 font-semibold mb-6 text-center max-w-2xl">
                 Empowering businesses and professionals to thrive
             </p>
-            <div class="flex flex-wrap gap-6">
+            <div class="flex flex-wrap gap-6 justify-center">
                 <!-- Primary Button -->
                 <button
-                    class="flex items-center bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:from-[#720000] hover:to-[#004aad] transition-all duration-300">
-                    Get Started
+                    class="flex items-center bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg shadow-lg text-base lg:text-xl hover:from-[#720000] hover:to-[#004aad] transition-all duration-300">
+                    Explore Opportunities
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </button>
-
                 <!-- Secondary Button -->
                 <button
-                    class="flex items-center border-2 border-[#004aad] text-[#004aad] font-semibold px-6 py-3 rounded-lg hover:bg-gradient-to-r hover:from-[#004aad]/20 hover:to-[#720000]/20 hover:text-[#720000] transition-all duration-300">
-                    Learn More
+                    class="flex items-center border-2 border-[#004aad] text-[#004aad] font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg text-base lg:text-xl hover:bg-gradient-to-r hover:from-[#004aad]/20 hover:to-[#720000]/20 hover:text-[#720000] transition-all duration-300">
+                    Get the Right Talent
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="10"></circle>
@@ -186,48 +237,38 @@
                 </button>
             </div>
         </div>
-        <!-- Right Image -->
-        <div class="md:col-span-7 flex justify-center items-center" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-full max-w-lg md:max-w-none h-[350px] md:h-[640px] rounded-lg overflow-hidden">
-                <img src="/assets/images/banner.png" alt="Hero Image" class="w-full h-full object-contain">
-            </div>
-        </div>
     </section>
     <!-- Hero section end -->
 
 
     <!-- What Makes Us Different start -->
     <section
-        class="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-20 pb-5 px-6 md:px-12 overflow-hidden">
+        class="relative bg-gradient-to-br from-[#720000] via-[#4d0000] to-[#004aad] pt-20 pb-12 px-6 md:px-12 mt-10 overflow-hidden text-white">
 
-        <!-- Floating gradient blobs -->
+        <!-- Abstract Angular Blends -->
         <div
-            class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-[#720000]/20 to-[#004aad]/20 rounded-full blur-3xl -z-10">
-        </div>
-        <div
-            class="absolute bottom-[-6rem] right-[-6rem] w-[28rem] h-[28rem] bg-gradient-to-tr from-[#004aad]/15 to-[#720000]/15 rounded-full blur-3xl -z-10">
-        </div>
-        <div
-            class="absolute top-1/3 left-1/2 w-40 h-40 bg-gradient-to-r from-[#720000]/10 to-[#004aad]/10 rounded-full blur-2xl -z-10 transform -translate-x-1/2">
+            class="absolute top-0 left-0 w-full h-96 bg-gradient-to-tr from-[#720000]/80 via-[#4d0000]/60 to-[#004aad]/40 clip-polygon-angled -z-10">
         </div>
 
-        <div class="max-w-5xl mx-auto text-center relative" data-aos="fade-up" data-aos-delay="200">
-            <!-- Heading -->
-            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+        <div
+            class="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-gradient-to-tl from-[#004aad]/50 via-[#720000]/40 to-[#4d0000]/30 rounded-br-[50px] blur-3xl -z-10">
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
                 What Makes
-                <span class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">
-                    Us Different?
-                </span>
+                <span class="bg-gradient-to-r from-[#fceaea] to-orange-500 bg-clip-text text-transparent">Us
+                    Different?</span>
             </h2>
 
-            <!-- Paragraph -->
-            <p class="text-lg text-gray-600 mt-8 max-w-4xl mx-auto leading-relaxed">
+            <p class="text-lg mt-8 max-w-4xl mx-auto leading-relaxed">
                 Filling vacancies isn't enough in today's market. We believe in
-                <span class="font-semibold text-gray-800">true partnership</span>:
+                <span class="font-semibold">true partnership</span>:
                 understanding your nuances to deliver solutions that genuinely
                 propel your business forward.
             </p>
         </div>
+
     </section>
     <!-- What Makes Us Different end -->
 
@@ -242,7 +283,7 @@
                 data-aos-delay="200">
                 <div
                     class="bg-white p-4 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                    <img src="/assets/images/what-we-do.png" alt="Our team working together"
+                    <img src="/assets/images/we-do.png" alt="Our team working together"
                         class="w-full h-auto max-h-[500px] object-cover rounded-xl">
                 </div>
                 <div
@@ -271,7 +312,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="users" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">100K+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="100000">0</p>
                         <p class="text-gray-500 mt-1">Vetted Candidates</p>
                     </div>
 
@@ -280,7 +321,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="briefcase" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">20K+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="20000">0</p>
                         <p class="text-gray-500 mt-1">Active Associates</p>
                     </div>
 
@@ -289,7 +330,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="map-pin" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">1.5K+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="1500">0</p>
                         <p class="text-gray-500 mt-1">Deployment Locations</p>
                     </div>
 
@@ -298,7 +339,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="smile" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">300+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="300">0</p>
                         <p class="text-gray-500 mt-1">Happy Clients</p>
                     </div>
 
@@ -307,7 +348,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="award" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">50+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="50">0</p>
                         <p class="text-gray-500 mt-1">Industry Awards</p>
                     </div>
 
@@ -316,7 +357,7 @@
                         <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
                             <i data-lucide="globe" class="w-5 h-5 text-[#720000]"></i>
                         </div>
-                        <p class="text-2xl font-bold text-gray-900">10+</p>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="10">0</p>
                         <p class="text-gray-500 mt-1">Global Partners</p>
                     </div>
                 </div>
@@ -490,7 +531,7 @@
     <!-- Industries we serve end -->
 
 
-    <footer class="bg-gradient-to-tr from-[#720000] via-[#4d0000] to-[#004aad] text-white relative overflow-hidden">
+    <footer class="bg-[#004aad] text-white relative overflow-hidden">
         <!-- Decorative Circle Background -->
         <div
             class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#fceaea30] mix-blend-screen blur-3xl pointer-events-none">
@@ -509,16 +550,16 @@
                     partnership-driven service.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#fceaea] transition text-xl">
+                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
                         <i data-lucide="facebook"></i>
                     </a>
-                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#fceaea] transition text-xl">
+                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
                         <i data-lucide="twitter"></i>
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#fceaea] transition text-xl">
+                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
                         <i data-lucide="linkedin"></i>
                     </a>
-                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#fceaea] transition text-xl">
+                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
                         <i data-lucide="instagram"></i>
                     </a>
                 </div>
@@ -610,6 +651,66 @@
                 }
             }
         }
+    </script>
+    <script>
+
+        // -- Swiper for industry section start -- //
+
+        new Swiper('.industry-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 18,
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 18 },     // Mobile (≤ 640px): 2 cards
+                768: { slidesPerView: 4, spaceBetween: 22 },     // iPad/Tablet (≥ 768px): 4 cards
+                1200: { slidesPerView: 6, spaceBetween: 24 },    // Desktop/Large (≥ 1200px): 6 cards
+            },
+            loop: true,
+            autoplay: { delay: 1700, disableOnInteraction: false },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+
+        // -- Swiper for industry section end -- //
+
+        // -- Counter Animation Start -- //
+
+        function animateCounter(counter) {
+            const target = +counter.getAttribute("data-target");
+            const duration = 2000; // animation duration (ms)
+            const step = target / (duration / 16);
+
+            let count = 0;
+            function updateCounter() {
+                count += step;
+                if (count < target) {
+                    counter.innerText = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            }
+            updateCounter();
+        }
+
+        // Trigger when section is visible
+        const counters = document.querySelectorAll(".counter");
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        obs.unobserve(entry.target); // run only once
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        counters.forEach(counter => observer.observe(counter));
+
+        // -- Counter Animation End -- //
     </script>
 
 
