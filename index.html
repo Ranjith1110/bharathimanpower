@@ -73,7 +73,7 @@
         <!-- Main navbar -->
         <header
             class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4 border-b border-[#e6bcbc]">
-            <a href="#"><img src="/assets/images/logo-blue.jpg" alt="Company Logo" class="h-16 w-auto" /></a>
+            <a href="#"><img src="/assets/images/logo.png" alt="Company Logo" class="h-16 w-auto" /></a>
             <nav class="hidden md:flex items-center space-x-10 text-[#004aad] font-semibold text-lg">
                 <a href="#about" class="hover:text-[#500000] transition">About</a>
                 <a href="#products" class="hover:text-[#500000] transition">Products</a>
@@ -150,71 +150,38 @@
 
 
     <!-- Hero section start -->
-    <section class="max-w-7xl mx-auto mt-10 md:mt-0 px-6 md:px-12 bg-gray-50 py-6 md:py-12">
+    <section class="bg-gray-50 py-0 md:py-12">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
 
-        <!-- Main Content -->
-        <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-8">
-            <!-- LEFT COLUMN -->
-            <div class="md:col-span-3 flex flex-col items-center space-y-3">
-                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
-                    Step Into
-                </span>
-                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
-                    Your Future With Us.
-                </span>
-            </div>
-            <!-- CENTER IMAGE -->
-            <div class="md:col-span-6 flex justify-center items-center">
-                <div
-                    class="relative flex items-center justify-center overflow-hidden rounded-lg max-w-[90vw] w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
-                    <img src="/assets/images/banner.png" alt="Hero"
-                        class="w-full h-auto object-contain rounded-lg transition-all duration-300" />
+                <!-- SLIDE 1: Full Image -->
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="/assets/images/banner-1.png" alt="Banner 2"
+                            class="w-full h-[200px] md:h-[600px] object-contain rounded-lg shadow-lg" />
+                    </div>
                 </div>
-            </div>
-            <!-- RIGHT COLUMN -->
-            <div class="md:col-span-3 flex flex-col items-center space-y-3">
-                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
-                    Your Workforce,
-                </span>
-                <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
-                    Our Responsibility.
-                </span>
-            </div>
-        </div>
 
-        <!-- BOTTOM ROW -->
-        <div class="mt-10 flex flex-col items-center w-full">
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-700 font-semibold mb-6 text-center max-w-2xl">
-                Stronger teams. Brighter careers. Together, we make it possible
-            </p>
-            <div class="flex flex-wrap gap-6 justify-center">
-                <!-- Primary Button -->
-                <button
-                    class="flex items-center bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg shadow-lg text-base lg:text-xl hover:from-[#720000] hover:to-[#004aad] transition-all duration-300">
-                    Explore Opportunities
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" viewBox="0 0 24 24">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </button>
-                <!-- Secondary Button -->
-                <button
-                    class="flex items-center border-2 border-[#004aad] text-[#004aad] font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg text-base lg:text-xl hover:bg-gradient-to-r hover:from-[#004aad]/20 hover:to-[#720000]/20 hover:text-[#720000] transition-all duration-300">
-                    Get the Right Talent
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" viewBox="0 0 24 24">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </button>
+                <!-- SLIDE 2: Full Image -->
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="/assets/images/banner-2.png" alt="Banner 3"
+                            class="w-full h-[200px] md:h-[600px] object-contain rounded-lg shadow-lg" />
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Swiper Controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
     <!-- Hero section end -->
 
 
-    
+
     <!-- What Makes Us Different start -->
     <section
         class="relative bg-gradient-to-br from-[#720000] via-[#4d0000] to-[#004aad] pt-20 pb-12 px-6 md:px-12 mt-10 overflow-hidden text-white">
@@ -231,7 +198,7 @@
         <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
                 What Makes
-                <span class="bg-gradient-to-r from-[#fceaea] to-orange-500 bg-clip-text text-transparent">Us
+                <span class="text-white bg-clip-text text-transparent">Us
                     Different?</span>
             </h2>
 
@@ -271,7 +238,7 @@
             <!-- Right Content -->
             <div data-aos="fade-up" data-aos-delay="200">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                    What <span class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">we
+                    What <span class="bg-gradient-to-r from-[#720000] to-[#004aad] bg-clip-text text-transparent">we
                         do?</span>
                 </h2>
                 <p class="text-lg text-gray-600 mb-10">
@@ -347,8 +314,8 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <!-- Section Heading -->
             <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-                Our <span
-                    class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">Services</span>
+                Our
+                <span class="bg-gradient-to-r from-[#720000] to-[#004aad] bg-clip-text text-transparent">Services</span>
             </h2>
             <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-sm sm:text-base md:text-lg">
                 We provide end-to-end workforce solutions designed to help businesses
@@ -359,12 +326,11 @@
             <!-- Creative Mosaic -->
             <div
                 class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 auto-rows-[200px] sm:auto-rows-[220px] md:auto-rows-[220px]">
-
                 <!-- Big Card -->
-                <div
-                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl animated-border">
                     <a href="/pages/permanent-staffing.html">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="smile" class="text-indigo-600 text-5xl mb-3"></i>
                             <p class="text-gray-800 font-bold text-lg sm:text-xl text-center">
                                 Permanent Staffing solutions
@@ -374,34 +340,36 @@
                 </div>
 
                 <!-- Small Stat Card -->
-                <div
-                    class="col-span-1 row-span-1 md:row-span-2 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="col-span-1 row-span-1 md:row-span-2 p-[2px] rounded-3xl animated-border">
                     <a href="/pages/payroll-contract.html">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="trending-up" class="text-green-600 text-5xl mb-2"></i>
                             <p class="text-gray-800 font-bold text-lg sm:text-xl text-center">
-                                Payroll &Contract Staffing solutions
+                                Payroll & Contract Staffing solutions
                             </p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Tall Card -->
-                <div
-                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl animated-border">
                     <a href="/pages/vendor-management.html">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="user-check" class="text-red-500 text-5xl mb-3"></i>
-                            <p class="text-gray-800 font-semibold text-center">Vendor management Services</p>
+                            <p class="text-gray-800 font-semibold text-center">
+                                Vendor management Services
+                            </p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Wide Card -->
-                <div
-                    class="col-span-1 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="col-span-1 row-span-1 p-[2px] rounded-3xl animated-border">
                     <a href="/pages/executive-retained.html">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="globe" class="text-indigo-500 text-5xl mb-3"></i>
                             <p class="text-gray-800 font-semibold text-center">
                                 Executive Search/Retained Search
@@ -411,10 +379,10 @@
                 </div>
 
                 <!-- Medium Card -->
-                <div
-                    class="p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="p-[2px] rounded-3xl animated-border">
                     <a href="">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="star" class="text-purple-500 text-5xl mb-3"></i>
                             <p class="text-gray-800 text-sm sm:text-base font-semibold text-center">
                                 Payroll Outsourcing/HR Services
@@ -424,10 +392,10 @@
                 </div>
 
                 <!-- Medium Card -->
-                <div
-                    class="p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="p-[2px] rounded-3xl animated-border">
                     <a href="/pages/assessment-testing.html">
-                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                        <div
+                            class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full transition-transform duration-500 hover:scale-105">
                             <i data-lucide="award" class="text-teal-500 text-5xl mb-3"></i>
                             <p class="text-gray-800 text-sm sm:text-base font-semibold text-center">
                                 Assessment & Testing Services
@@ -437,28 +405,29 @@
                 </div>
 
                 <!-- Tall Card -->
-                <div
-                    class="row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                <div class="row-span-1 p-[2px] rounded-3xl animated-border">
                     <div
-                        class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full text-gray-900 font-bold text-lg text-center">
+                        class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full text-gray-900 font-bold text-lg text-center transition-transform duration-500 hover:scale-105">
                         <i data-lucide="lightbulb" class="text-orange-500 text-5xl mb-3"></i>
                         Training
                     </div>
                 </div>
 
                 <!-- Extra Card -->
-                <div
-                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
-                    <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                <div class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl animated-border">
+                    <div
+                        class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-transform duration-500 hover:scale-105">
                         <i data-lucide="book" class="text-green-600 text-5xl mb-2"></i>
-                        <p class="text-gray-800 font-semibold text-center">Student Recruitment</p>
+                        <p class="text-gray-800 font-semibold text-center">
+                            Student Recruitment
+                        </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     <!-- Services end -->
+
 
 
 
@@ -470,7 +439,7 @@
         <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
             <h2 class="text-center text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
                 Where we make <span
-                    class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">an
+                    class="bg-gradient-to-r from-[#720000] to-[#004aad] bg-clip-text text-transparent">an
                     Impact?</span>
             </h2>
             <div class="relative py-10">

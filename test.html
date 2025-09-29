@@ -2,121 +2,790 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Our Services — Bharathi Manpower</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bharathi Manpower</title>
 
-    <!-- Tailwind -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Lucide icons -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Outfit font -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        .service-card {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .icon-default {
-            color: #720000;
-            transition: color 0.3s ease;
-        }
-
-        .service-card:hover .icon-default,
-        .service-card:hover h4 {
-            color: #004aad;
-        }
-    </style>
 </head>
 
-<body class="font-[Outfit] bg-gray-50">
+<!-- #004aad - blue -->
+<!-- #720000 - maroon -->
 
-    <!-- Services Start -->
-    <section class="w-full py-12">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid lg:grid-cols-12 gap-8">
+<body class="bg-gray-50">
 
-                <!-- Left content -->
-                <div class="lg:col-span-5 flex flex-col justify-center bg-[#720000] p-8 text-white rounded-lg">
-                    <h1 class="text-4xl font-bold mb-5">
-                        Our <span class="bg-white text-[#720000] px-2 uppercase">Services</span>
-                    </h1>
-                    <h4 class="text-xl">
-                        <span class="text-6xl font-extrabold">8</span> services we provide
-                    </h4>
+
+    <!-- Navbar start -->
+    <div id="navwrapper" class="fixed top-0 left-0 w-full z-50 navwrapper shadow-md bg-white">
+        <!-- Top info bar desktop/tablet/large -->
+        <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-between bg-[#004aad]/20 px-6 py-2 text-xs sm:text-sm text-[#004aad] font-medium rounded-b-md shadow-sm gap-2 sm:gap-0 select-none hidden md:flex">
+            <div class="flex items-center space-x-4 w-full sm:w-auto justify-center sm:justify-start">
+                <div class="flex items-center space-x-1.5">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>Chennai, Tamil Nadu</span>
+                </div>
+                <div tabindex="0" class="relative group cursor-pointer">
+                    <div class="flex items-center space-x-1.5">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>Associate Support</span>
+                        <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                    </div>
+                    <div
+                        class="fade-dropdown absolute left-0 bg-white text-[#004aad] rounded-md shadow-lg p-3 min-w-max z-50 flex flex-col gap-1 text-sm">
+                        <a href="mailto:support@bharathimanpower.com"
+                            class="hover:text-[#500000] underline break-all">support@bharathimanpower.com</a>
+                        <a href="tel:+9144xxxxxxx" class="hover:text-[#500000] underline">+91 44-XXXXXXX</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex space-x-4 justify-center sm:justify-start w-full sm:w-auto">
+                <a href="https://facebook.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
+                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Main navbar -->
+        <header
+            class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4 border-b border-[#e6bcbc]">
+            <a href="#"><img src="/assets/images/logo.png" alt="Company Logo" class="h-16 w-auto" /></a>
+            <nav class="hidden md:flex items-center space-x-10 text-[#004aad] font-semibold text-lg">
+                <a href="#about" class="hover:text-[#500000] transition">About</a>
+                <a href="#products" class="hover:text-[#500000] transition">Products</a>
+                <a href="#contact" class="hover:text-[#500000] transition">Contact</a>
+            </nav>
+            <!-- Hamburger shown on anything smaller than md -->
+            <button id="menu-btn" class="md:hidden inline-flex p-2 rounded-md hover:bg-[#fceaea] transition">
+                <i data-lucide="menu" class="w-8 h-8 text-[#720000]"></i>
+            </button>
+        </header>
+    </div>
+    <div class="h-[104px]"></div>
+    <!-- Navbar end -->
+
+
+
+    <!-- Mobile Sidebar Menu start -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black/60 opacity-0 invisible transition-opacity duration-300">
+        <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl rounded-l-2xl overflow-y-auto transition-transform duration-500 transform translate-x-full"
+            id="menu-panel">
+            <div class="flex items-center justify-between px-8 py-6 border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 tracking-wide">Menu</h3>
+                <button onclick="toggleMenu()" class="p-2 rounded-full hover:bg-gray-100 transition">
+                    <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
+
+            <!-- Main nav links -->
+            <nav class="flex flex-col px-8 py-10 gap-12 text-lg font-semibold text-gray-800">
+                <a href="#about" onclick="toggleMenu()"
+                    class="hover:text-[#720000] transition-all duration-200">About</a>
+                <a href="#products" onclick="toggleMenu()"
+                    class="hover:text-[#720000] transition-all duration-200">Products</a>
+                <a href="#contact" onclick="toggleMenu()"
+                    class="hover:text-[#720000] transition-all duration-200">Contact</a>
+            </nav>
+
+            <!-- Info bar at bottom styled as card -->
+            <div class="mt-auto bg-[#720000]/10 p-6 mx-6 mb-6 rounded-xl shadow-md text-gray-900 space-y-5">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-[#720000]"></i>
+                    <span class="font-semibold text-base">Chennai, Tamil Nadu</span>
+                </div>
+                <div class="space-y-2 border-t border-[#720000]/40 pt-4">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="user" class="w-5 h-5 text-[#720000]"></i>
+                        <span class="font-semibold text-base">Associate Support</span>
+                    </div>
+                    <div class="pl-8 space-y-1 text-sm font-medium text-[#720000]">
+                        <a href="mailto:support@bharathimanpower.com"
+                            class="hover:text-[#720000] underline block break-all">support@bharathimanpower.com</a>
+                        <a href="tel:+9144xxxxxxx" class="hover:text-[#720000] underline">+91 44-XXXXXXX</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-start gap-6 pt-4 text-[#720000]">
+                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#720000] transition">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#720000] transition">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#720000] transition">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#720000] transition">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Sidebar Menu end -->
+
+
+
+    <!-- Hero section start -->
+    <section class="mt-10 md:mt-0 bg-gray-50 py-6 md:py-12">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- SLIDE 1: Existing Design -->
+                <div class="swiper-slide">
+                    <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-8">
+                        <!-- LEFT COLUMN -->
+                        <div class="md:col-span-3 flex flex-col items-center space-y-3">
+                            <span
+                                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
+                                Step Into
+                            </span>
+                            <span
+                                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
+                                Your Future With Us.
+                            </span>
+                        </div>
+                        <!-- CENTER IMAGE -->
+                        <div class="md:col-span-6 flex justify-center items-center">
+                            <div
+                                class="relative flex items-center justify-center overflow-hidden rounded-lg max-w-[90vw] w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+                                <img src="/assets/images/banner.png" alt="Hero"
+                                    class="w-full h-auto object-contain rounded-lg transition-all duration-300" />
+                            </div>
+                        </div>
+                        <!-- RIGHT COLUMN -->
+                        <div class="md:col-span-3 flex flex-col items-center space-y-3">
+                            <span
+                                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
+                                Your Workforce,
+                            </span>
+                            <span
+                                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight text-center">
+                                Our Responsibility.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM ROW -->
+                    <div class="mt-10 flex flex-col items-center w-full">
+                        <p
+                            class="text-lg md:text-xl lg:text-2xl text-gray-700 font-semibold mb-6 text-center max-w-2xl">
+                            Stronger teams. Brighter careers. Together, we make it possible
+                        </p>
+                        <div class="flex flex-wrap gap-6 justify-center">
+                            <!-- Primary Button -->
+                            <button
+                                class="flex items-center bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg shadow-lg text-base lg:text-xl hover:from-[#720000] hover:to-[#004aad] transition-all duration-300">
+                                Explore Opportunities
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                            <!-- Secondary Button -->
+                            <button
+                                class="flex items-center border-2 border-[#004aad] text-[#004aad] font-semibold px-6 py-3 lg:px-8 lg:py-4 rounded-lg text-base lg:text-xl hover:bg-gradient-to-r hover:from-[#004aad]/20 hover:to-[#720000]/20 hover:text-[#720000] transition-all duration-300">
+                                Get the Right Talent
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right content -->
-                <div class="lg:col-span-7">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- SLIDE 2: Full Image -->
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="/assets/images/banner-1.png" alt="Banner 2"
+                            class="w-full h-[500px] md:h-[600px] object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
 
-                        <!-- Service 1 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="users" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Permanent Staffing</h4>
+                <!-- SLIDE 3: Full Image -->
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center">
+                        <img src="/assets/images/banner-2.png" alt="Banner 3"
+                            class="w-full h-[500px] md:h-[600px] object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Swiper Controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+
+
+    <!-- What Makes Us Different start -->
+    <section
+        class="relative bg-gradient-to-br from-[#720000] via-[#4d0000] to-[#004aad] pt-20 pb-12 px-6 md:px-12 mt-10 overflow-hidden text-white">
+
+        <!-- Abstract Angular Blends -->
+        <div
+            class="absolute top-0 left-0 w-full h-96 bg-gradient-to-tr from-[#720000]/80 via-[#4d0000]/60 to-[#004aad]/40 clip-polygon-angled -z-10">
+        </div>
+
+        <div
+            class="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-gradient-to-tl from-[#004aad]/50 via-[#720000]/40 to-[#4d0000]/30 rounded-br-[50px] blur-3xl -z-10">
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                What Makes
+                <span class="bg-gradient-to-r from-[#fceaea] to-orange-500 bg-clip-text text-transparent">Us
+                    Different?</span>
+            </h2>
+
+            <p class="text-lg mt-8 max-w-4xl mx-auto leading-relaxed">
+                Filling vacancies isn't enough in today's market. We believe in
+                <span class="font-semibold">true partnership</span>:
+                understanding your nuances to deliver solutions that genuinely
+                propel your business forward.
+            </p>
+        </div>
+
+    </section>
+    <!-- What Makes Us Different end -->
+
+
+
+    <!-- What we do? start -->
+    <section class="py-6 md:py-24 px-6 md:px-12 mt-10 md:mt-0">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left Image -->
+            <div class="relative flex items-center justify-center mt-12 lg:mt-0" data-aos="fade-right"
+                data-aos-delay="200">
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                    <img src="/assets/images/we-do.png" alt="Our team working together"
+                        class="w-full h-auto max-h-[500px] object-cover rounded-xl">
+                </div>
+                <div
+                    class="absolute -top-8 -right-4 w-20 h-20 bg-gradient-to-br from-orange-100 to-red-100 rounded-full opacity-50 -z-10">
+                </div>
+                <div
+                    class="absolute -bottom-8 -left-8 w-28 h-28 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg opacity-50 -z-10 transform -rotate-12">
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    What <span class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">we
+                        do?</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-10">
+                    We do more than fill vacancies — we build lasting partnerships. Our approach ensures we truly
+                    understand your needs, delivering solutions that grow with your business.
+                </p>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="users" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="100000">0</p>
+                        <p class="text-gray-500 mt-1">Vetted Candidates</p>
+                    </div>
 
-                        <!-- Service 2 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="briefcase" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Payroll & Contract Staffing</h4>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="20000">0</p>
+                        <p class="text-gray-500 mt-1">Active Associates</p>
+                    </div>
 
-                        <!-- Service 3 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="layers" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Vendor Management</h4>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="1500">0</p>
+                        <p class="text-gray-500 mt-1">Deployment Locations</p>
+                    </div>
 
-                        <!-- Service 4 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="search" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Executive / Retained Search</h4>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="smile" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="300">0</p>
+                        <p class="text-gray-500 mt-1">Happy Clients</p>
+                    </div>
 
-                        <!-- Service 5 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="file-text" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Payroll Outsourcing / HR</h4>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="award" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="50">0</p>
+                        <p class="text-gray-500 mt-1">Industry Awards</p>
+                    </div>
 
-                        <!-- Service 6 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="check-circle" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Assessment & Testing</h4>
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-flex p-3 bg-red-50 rounded-full mb-4">
+                            <i data-lucide="globe" class="w-5 h-5 text-[#720000]"></i>
                         </div>
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="10">0</p>
+                        <p class="text-gray-500 mt-1">Global Partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- What we do? end -->
 
-                        <!-- Service 7 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="book-open" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Training</h4>
+
+
+    <!-- Services start -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <!-- Section Heading -->
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                Our <span
+                    class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-sm sm:text-base md:text-lg">
+                We provide end-to-end workforce solutions designed to help businesses
+                find the right talent, manage HR processes efficiently, and build a
+                future-ready workforce.
+            </p>
+
+            <!-- Creative Mosaic -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 auto-rows-[200px] sm:auto-rows-[220px] md:auto-rows-[220px]">
+
+                <!-- Big Card -->
+                <div
+                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="/pages/permanent-staffing.html">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                            <i data-lucide="smile" class="text-indigo-600 text-5xl mb-3"></i>
+                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center">
+                                Permanent Staffing solutions
+                            </p>
                         </div>
+                    </a>
+                </div>
 
-                        <!-- Service 8 -->
-                        <div class="service-card bg-white rounded-xl p-6 flex flex-col items-center text-center">
-                            <i data-lucide="graduation-cap" class="icon-default w-12 h-12 mb-4"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Student Recruitment</h4>
+                <!-- Small Stat Card -->
+                <div
+                    class="col-span-1 row-span-1 md:row-span-2 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="/pages/payroll-contract.html">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                            <i data-lucide="trending-up" class="text-green-600 text-5xl mb-2"></i>
+                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center">
+                                Payroll &Contract Staffing solutions
+                            </p>
                         </div>
+                    </a>
+                </div>
 
+                <!-- Tall Card -->
+                <div
+                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="/pages/vendor-management.html">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                            <i data-lucide="user-check" class="text-red-500 text-5xl mb-3"></i>
+                            <p class="text-gray-800 font-semibold text-center">Vendor management Services</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Wide Card -->
+                <div
+                    class="col-span-1 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="/pages/executive-retained.html">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                            <i data-lucide="globe" class="text-indigo-500 text-5xl mb-3"></i>
+                            <p class="text-gray-800 font-semibold text-center">
+                                Executive Search/Retained Search
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Medium Card -->
+                <div
+                    class="p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                            <i data-lucide="star" class="text-purple-500 text-5xl mb-3"></i>
+                            <p class="text-gray-800 text-sm sm:text-base font-semibold text-center">
+                                Payroll Outsourcing/HR Services
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Medium Card -->
+                <div
+                    class="p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <a href="/pages/assessment-testing.html">
+                        <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-4 h-full">
+                            <i data-lucide="award" class="text-teal-500 text-5xl mb-3"></i>
+                            <p class="text-gray-800 text-sm sm:text-base font-semibold text-center">
+                                Assessment & Testing Services
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tall Card -->
+                <div
+                    class="row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <div
+                        class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full text-gray-900 font-bold text-lg text-center">
+                        <i data-lucide="lightbulb" class="text-orange-500 text-5xl mb-3"></i>
+                        Training
+                    </div>
+                </div>
+
+                <!-- Extra Card -->
+                <div
+                    class="col-span-1 sm:col-span-2 row-span-1 p-[2px] rounded-3xl bg-gradient-to-r from-[#720000] to-[#004aad] hover:shadow-2xl transition duration-300">
+                    <div class="bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full">
+                        <i data-lucide="book" class="text-green-600 text-5xl mb-2"></i>
+                        <p class="text-gray-800 font-semibold text-center">Student Recruitment</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-    <!-- Services End -->
+    <!-- Services end -->
 
+
+
+    <!-- Industries we serve start -->
+    <section class="relative py-12 sm:py-14 bg-white overflow-hidden">
+        <svg class="absolute left-0 top-0 w-60 h-60 opacity-20 -z-10 pointer-events-none" viewBox="0 0 400 400">
+            <circle cx="180" cy="180" r="160" fill="#E3E8EF"></circle>
+        </svg>
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
+            <h2 class="text-center text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                Where we make <span
+                    class="bg-gradient-to-r from-[#720000] to-orange-500 bg-clip-text text-transparent">an
+                    Impact?</span>
+            </h2>
+            <div class="relative py-10">
+                <div class="swiper industry-swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- CARD: Telecommunications -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="satellite-dish" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">
+                                    Telecommunications</div>
+                            </div>
+                        </div>
+                        <!-- CARD: Ecommerce -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="shopping-cart" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Ecommerce
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD: Healthcare -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="heart-pulse" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Healthcare
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD: Information Technology -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="monitor" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">
+                                    Information<br>Technology</div>
+                            </div>
+                        </div>
+                        <!-- CARD: Manufacturing -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="factory" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Manufacturing
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD: Retail -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="store" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Retail</div>
+                            </div>
+                        </div>
+                        <!-- CARD: Healthcare -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="heart-pulse" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Healthcare
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD: Information Technology -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="monitor" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">
+                                    Information<br>Technology</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button
+                        class="swiper-button-prev absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 z-10 bg-white shadow-md rounded-full flex items-center justify-center border border-gray-200 hover:bg-blue-50 transition">
+                        <svg class="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button
+                        class="swiper-button-next absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 z-10 bg-white shadow-md rounded-full flex items-center justify-center border border-gray-200 hover:bg-blue-50 transition">
+                        <svg class="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Industries we serve end -->
+
+
+
+    <!-- Footer start -->
+    <footer class="bg-[#004aad] text-white relative overflow-hidden">
+        <!-- Decorative Circle Background -->
+        <div
+            class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#fceaea30] mix-blend-screen blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-32 -left-28 w-80 h-80 rounded-full bg-[#004aad30] mix-blend-screen blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- About -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Bharathi Manpower</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Empowering businesses and professionals across India with trusted manpower, staffing solutions, and
+                    partnership-driven service.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li><a href="#about" class="hover:text-[#fceaea] transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-[#fceaea] transition">Services</a></li>
+                    <li><a href="#products" class="hover:text-[#fceaea] transition">Products</a></li>
+                    <li><a href="#contact" class="hover:text-[#fceaea] transition">Contact</a></li>
+                    <li><a href="/privacy-policy" class="hover:text-[#fceaea] transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-[#fceaea]"></i>
+                        <span>Chennai, Tamil Nadu, India</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-[#fceaea]"></i>
+                        <a href="mailto:support@bharathimanpower.com"
+                            class="hover:text-[#fceaea]">support@bharathimanpower.com</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-[#fceaea]"></i>
+                        <a href="tel:+9144xxxxxxx" class="hover:text-[#fceaea]">+91 44-XXXXXXX</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Subscribe to get the latest updates and insights.</p>
+                <form class="flex flex-col space-y-4"
+                    onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <input type="email" required placeholder="Email Address"
+                        class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#fceaea] text-gray-900" />
+                    <button type="submit"
+                        class="bg-[#fceaea] text-[#720000] font-semibold px-4 py-3 rounded-lg hover:bg-white hover:text-[#004aad] transition">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="border-t border-[#fceaea40] mt-10 pt-6 text-center text-gray-300 text-sm select-none">
+            &copy; 2025 Bharathi Manpower. All Rights Reserved.
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- External JS -->
+    <script src="/assets/js/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        lucide.createIcons();
+        AOS.init({
+            duration: 1000, // animation duration
+            once: true,     // whether animation should happen only once - while scrolling down
+        });
     </script>
+    <!-- Typed.js -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#A91D3A',
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+
+        // -- Swiper for industry section start -- //
+
+        new Swiper('.industry-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 18,
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 18 },     // Mobile (≤ 640px): 2 cards
+                768: { slidesPerView: 4, spaceBetween: 22 },     // iPad/Tablet (≥ 768px): 4 cards
+                1200: { slidesPerView: 6, spaceBetween: 24 },    // Desktop/Large (≥ 1200px): 6 cards
+            },
+            loop: true,
+            autoplay: { delay: 1700, disableOnInteraction: false },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+
+        // -- Swiper for industry section end -- //
+
+        // -- Counter Animation Start -- //
+
+        function animateCounter(counter) {
+            const target = +counter.getAttribute("data-target");
+            const duration = 2000; // animation duration (ms)
+            const step = target / (duration / 16);
+
+            let count = 0;
+            function updateCounter() {
+                count += step;
+                if (count < target) {
+                    counter.innerText = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            }
+            updateCounter();
+        }
+
+        // Trigger when section is visible
+        const counters = document.querySelectorAll(".counter");
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        obs.unobserve(entry.target); // run only once
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        counters.forEach(counter => observer.observe(counter));
+
+        // -- Counter Animation End -- //
+    </script>
+
+
 </body>
 
 </html>
