@@ -35,7 +35,7 @@
     <div id="navwrapper" class="fixed top-0 left-0 w-full z-50 navwrapper shadow-md bg-white">
         <!-- Top info bar desktop/tablet/large -->
         <div
-            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-between bg-[#fceaea] px-6 py-2 text-xs sm:text-sm text-[#720000] font-medium rounded-b-md shadow-sm gap-2 sm:gap-0 select-none hidden md:flex">
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-between bg-[#004aad]/20 px-6 py-2 text-xs sm:text-sm text-[#004aad] font-medium rounded-b-md shadow-sm gap-2 sm:gap-0 select-none hidden md:flex">
             <div class="flex items-center space-x-4 w-full sm:w-auto justify-center sm:justify-start">
                 <div class="flex items-center space-x-1.5">
                     <i data-lucide="map-pin" class="w-4 h-4"></i>
@@ -48,7 +48,7 @@
                         <i data-lucide="chevron-down" class="w-3 h-3"></i>
                     </div>
                     <div
-                        class="fade-dropdown absolute left-0 mt-2 bg-white text-[#720000] rounded-md shadow-lg p-3 min-w-max z-50 flex flex-col gap-1 text-sm">
+                        class="fade-dropdown absolute left-0 bg-white text-[#004aad] rounded-md shadow-lg p-3 min-w-max z-50 flex flex-col gap-1 text-sm">
                         <a href="mailto:support@bharathimanpower.com"
                             class="hover:text-[#500000] underline break-all">support@bharathimanpower.com</a>
                         <a href="tel:+9144xxxxxxx" class="hover:text-[#500000] underline">+91 44-XXXXXXX</a>
@@ -56,16 +56,16 @@
                 </div>
             </div>
             <div class="flex space-x-4 justify-center sm:justify-start w-full sm:w-auto">
-                <a href="https://facebook.com/" target="_blank" class="text-[#720000] hover:text-[#500000] transition">
+                <a href="https://facebook.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
                     <i data-lucide="facebook" class="w-5 h-5"></i>
                 </a>
-                <a href="https://twitter.com/" target="_blank" class="text-[#720000] hover:text-[#500000] transition">
+                <a href="https://twitter.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
                     <i data-lucide="twitter" class="w-5 h-5"></i>
                 </a>
-                <a href="https://linkedin.com/" target="_blank" class="text-[#720000] hover:text-[#500000] transition">
+                <a href="https://linkedin.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
                     <i data-lucide="linkedin" class="w-5 h-5"></i>
                 </a>
-                <a href="https://instagram.com/" target="_blank" class="text-[#720000] hover:text-[#500000] transition">
+                <a href="https://instagram.com/" target="_blank" class="text-[#004aad] hover:text-[#500000] transition">
                     <i data-lucide="instagram" class="w-5 h-5"></i>
                 </a>
             </div>
@@ -73,8 +73,8 @@
         <!-- Main navbar -->
         <header
             class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4 border-b border-[#e6bcbc]">
-            <a href="#"><img src="/assets/images/logo-maroon.jpg" alt="Company Logo" class="h-16 w-auto" /></a>
-            <nav class="hidden md:flex items-center space-x-10 text-[#720000] font-semibold text-lg">
+            <a href="#"><img src="/assets/images/logo-blue.jpg" alt="Company Logo" class="h-16 w-auto" /></a>
+            <nav class="hidden md:flex items-center space-x-10 text-[#004aad] font-semibold text-lg">
                 <a href="#about" class="hover:text-[#500000] transition">About</a>
                 <a href="#products" class="hover:text-[#500000] transition">Products</a>
                 <a href="#contact" class="hover:text-[#500000] transition">Contact</a>
@@ -529,7 +529,25 @@
                                 <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Retail</div>
                             </div>
                         </div>
-                        <!-- Add more cards as needed -->
+                        <!-- CARD: Healthcare -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="heart-pulse" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">Healthcare
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD: Information Technology -->
+                        <div class="swiper-slide flex justify-center py-1">
+                            <div
+                                class="bg-white rounded-2xl shadow-lg border border-gray-100 px-5 py-6 flex flex-col items-center w-[130px] sm:w-[150px] md:w-[170px] max-w-[90vw] h-[150px] sm:h-[160px] md:h-[150px]">
+                                <i data-lucide="monitor" class="w-10 h-10 mb-2 sm:mb-3 text-blue-700"></i>
+                                <div class="text-sm sm:text-base text-gray-800 font-semibold text-center">
+                                    Information<br>Technology</div>
+                            </div>
+                        </div>
+
 
                     </div>
 
