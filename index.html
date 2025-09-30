@@ -76,7 +76,7 @@
             class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4 border-b border-[#e6bcbc]">
             <a href="#"><img src="/assets/images/logo.png" alt="Company Logo" class="h-16 w-auto" /></a>
             <nav class="hidden md:flex items-center space-x-10 text-[#004aad] font-semibold text-lg">
-                <a href="#home" class="hover:text-[#500000] transition">Home</a>
+                <a href="/index.html" class="hover:text-[#500000] transition">Home</a>
 
                 <!-- Services dropdown (desktop) -->
                 <div class="relative group">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="hover:text-[#500000] transition">Contact</a>
+                <a href="" class="hover:text-[#500000] transition">Contact Us</a>
             </nav>
 
             <!-- Hamburger -->
@@ -137,7 +137,7 @@
 
             <!-- Main nav links -->
             <nav class="flex flex-col px-8 py-10 gap-6 text-lg font-semibold text-gray-800">
-                <a href="#home" onclick="toggleMenu()" class="hover:text-[#720000] transition">Home</a>
+                <a href="/index.html" class="hover:text-[#720000] transition">Home</a>
 
                 <!-- Services accordion (mobile) -->
                 <div class="space-y-2">
@@ -171,7 +171,7 @@
                     </div>
                 </div>
 
-                <a href="#contact" onclick="toggleMenu()" class="hover:text-[#720000] transition">Contact Us</a>
+                <a href="" class="hover:text-[#720000] transition">Contact Us</a>
             </nav>
 
             <!-- Info bar at bottom -->
@@ -680,8 +680,8 @@
 
 
     <!-- Footer start -->
-    <footer class="bg-[#004aad] text-white relative overflow-hidden">
-        <!-- Decorative Circle Background -->
+    <footer class="bg-[#004aad] text-white relative overflow-hidden select-none">
+        <!-- Decorative Circle Backgrounds -->
         <div
             class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#fceaea30] mix-blend-screen blur-3xl pointer-events-none">
         </div>
@@ -689,28 +689,25 @@
             class="absolute -bottom-32 -left-28 w-80 h-80 rounded-full bg-[#004aad30] mix-blend-screen blur-3xl pointer-events-none">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-
-            <!-- About -->
+        <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+            <!-- Logo/About -->
             <div>
-                <h3 class="text-2xl font-bold mb-4">Bharathi Manpower</h3>
+                <div class="flex items-center mb-4 space-x-3">
+                    <img src="/assets/images/logo-white.png" alt="Bharathi Manpower logo" class="w-48 rounded-lg" />
+                </div>
                 <p class="text-gray-300 mb-6 leading-relaxed">
                     Empowering businesses and professionals across India with trusted manpower, staffing solutions, and
                     partnership-driven service.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
-                        <i data-lucide="facebook"></i>
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
-                        <i data-lucide="twitter"></i>
-                    </a>
-                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#720000] transition text-xl">
-                        <i data-lucide="instagram"></i>
-                    </a>
+                <div class="flex space-x-4 mt-2">
+                    <a href="https://facebook.com/" target="_blank" class="hover:text-[#fceaea] transition text-2xl"><i
+                            data-lucide="facebook"></i></a>
+                    <a href="https://twitter.com/" target="_blank" class="hover:text-[#fceaea] transition text-2xl"><i
+                            data-lucide="twitter"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" class="hover:text-[#fceaea] transition text-2xl"><i
+                            data-lucide="linkedin"></i></a>
+                    <a href="https://instagram.com/" target="_blank" class="hover:text-[#fceaea] transition text-2xl"><i
+                            data-lucide="instagram"></i></a>
                 </div>
             </div>
 
@@ -746,24 +743,16 @@
                 </ul>
             </div>
 
-            <!-- Newsletter Signup -->
+            <!-- Have Questions? -->
             <div>
-                <h3 class="text-2xl font-bold mb-4">Newsletter</h3>
-                <p class="text-gray-300 mb-4">Subscribe to get the latest updates and insights.</p>
-                <form class="flex flex-col space-y-4"
-                    onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="email" required placeholder="Email Address"
-                        class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#fceaea] text-gray-900" />
-                    <button type="submit"
-                        class="bg-[#fceaea] text-[#720000] font-semibold px-4 py-3 rounded-lg hover:bg-white hover:text-[#004aad] transition">
-                        Subscribe
-                    </button>
-                </form>
+                <h3 class="text-2xl font-bold mb-4">Have questions?</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Drop us a line! We’re happy to help and will respond within 24 hours.
+                </p>
             </div>
-
         </div>
 
-        <div class="border-t border-[#fceaea40] mt-10 pt-6 text-center text-gray-300 text-sm select-none">
+        <div class="border-t border-[#fceaea40] mt-10 pt-6 text-center text-gray-300 text-sm relative z-10">
             &copy; 2025 Bharathi Manpower. All Rights Reserved.
         </div>
     </footer>
