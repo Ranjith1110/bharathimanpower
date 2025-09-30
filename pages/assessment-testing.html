@@ -152,6 +152,7 @@
 
     <section
         class="relative w-full bg-gradient-to-br from-[#eaf4ff] via-[#fff9f3] to-[#fbeee7] py-16 md:py-24 px-4 md:px-10 overflow-hidden">
+
         <!-- Accent gradient blobs -->
         <div
             class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-[#004aad]/20 to-[#720000]/20 rounded-full blur-2xl -z-10">
@@ -160,24 +161,45 @@
             class="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-[#720000]/15 to-[#004aad]/10 rounded-full blur-2xl -z-10">
         </div>
 
-        <div class="max-w-5xl mx-auto relative z-10">
-            <!-- Heading and intro -->
-            <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-4">Assessment & Testing Services</h1>
-            <h2
-                class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-[#004aad] to-[#720000] bg-clip-text text-transparent mb-5 text-center">
-                Precision in Candidate Evaluation
-            </h2>
+        <div class="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
 
-            <!-- Banner Image -->
-            <div class="flex justify-center mb-8">
-                <img src="/assets/images/banner-2.png" alt="Assessment & Testing Banner"
-                    class="rounded-2xl shadow-xl max-h-80 object-cover w-full md:w-3/4 lg:w-2/3" />
+            <!-- Banner Image Left -->
+            <div class="relative group" data-aos="fade-right">
+                <img src="/assets/images/we-do.png" alt="Assessment & Testing Banner"
+                    class="rounded-2xl shadow-2xl object-cover w-full h-[300px] md:h-[500px] transition-transform duration-500 group-hover:scale-105" />
+                <!-- Decorative floating shape -->
+                <div
+                    class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#004aad]/40 to-[#720000]/40 rounded-full blur-xl">
+                </div>
             </div>
 
-            <p class="text-lg md:text-xl text-gray-700 text-center mb-8 max-w-3xl mx-auto">
-                Objective, data-driven assessment tools for more accurate hiring decisions, stronger teams,<br />
-                and reduced mis-hire risk.
-            </p>
+            <!-- Content Right -->
+            <div class="text-center md:text-left" data-aos="fade-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Assessment & Testing <span
+                        class="bg-gradient-to-r from-[#004aad] to-[#720000] bg-clip-text text-transparent">Services</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 mb-6">
+                    Precision in Candidate Evaluation
+                </h2>
+                <p class="text-lg md:text-xl text-gray-700 mb-6">
+                    Objective, data-driven assessment tools for accurate hiring decisions, stronger teams,
+                    and reduced mis-hire risk.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="/contact-us"
+                        class="px-6 py-3 rounded-full bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold shadow hover:opacity-90 transition">
+                        Contact Us
+                    </a>
+                    <a href="/request-consultation"
+                        class="px-6 py-3 rounded-full border border-[#004aad] text-[#004aad] font-semibold hover:bg-[#004aad] hover:text-white transition">
+                        Request a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10 mt-20">
 
             <!-- Feature / Benefit Cards Row -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -279,22 +301,6 @@
                 </div>
             </div>
 
-
-
-            <!-- CTA Card -->
-            <div
-                class="mx-auto max-w-2xl bg-gradient-to-r from-[#004aad] to-[#720000] rounded-2xl shadow-xl p-10 text-white text-center">
-                <h4 class="text-2xl font-bold mb-2">Ready to hire with confidence?</h4>
-                <p class="mb-4 font-medium">
-                    Partner with Bharathi Manpower for objective, data-driven talent evaluation.
-                </p>
-                <a href="/contact-us"
-                    class="inline-block bg-white text-[#004aad] hover:text-[#720000] font-bold rounded-full px-6 py-3 shadow transition-all duration-300">Contact
-                    Us</a>
-                <a href="/request-consultation"
-                    class="inline-block ml-4 border border-white text-white font-bold rounded-full px-6 py-3 hover:bg-white hover:text-[#720000] transition-all duration-300">Request
-                    a Consultation</a>
-            </div>
         </div>
     </section>
 
