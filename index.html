@@ -33,7 +33,7 @@
 
     <!-- Navbar start -->
     <div id="navwrapper" class="fixed top-0 left-0 w-full z-50 navwrapper shadow-md bg-white">
-        <!-- Top info bar desktop/tablet/large -->
+        <!-- Top info bar -->
         <div
             class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-between bg-[#004aad]/20 px-6 py-2 text-xs sm:text-sm text-[#004aad] font-medium rounded-b-md shadow-sm gap-2 sm:gap-0 select-none hidden md:flex">
             <div class="flex items-center space-x-4 w-full sm:w-auto justify-center sm:justify-start">
@@ -70,16 +70,47 @@
                 </a>
             </div>
         </div>
+
         <!-- Main navbar -->
         <header
             class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-12 py-4 border-b border-[#e6bcbc]">
             <a href="#"><img src="/assets/images/logo.png" alt="Company Logo" class="h-16 w-auto" /></a>
             <nav class="hidden md:flex items-center space-x-10 text-[#004aad] font-semibold text-lg">
-                <a href="#about" class="hover:text-[#500000] transition">About</a>
-                <a href="#products" class="hover:text-[#500000] transition">Products</a>
+                <a href="#home" class="hover:text-[#500000] transition">Home</a>
+
+                <!-- Services dropdown (desktop) -->
+                <div class="relative group">
+                    <a href="#services" class="hover:text-[#500000] transition flex items-center gap-1">
+                        Services
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div
+                        class="absolute left-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
+                        <ul class="py-2 text-gray-700">
+                            <li><a href="/pages/permanent-staffing.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Permanent Staffing</a></li>
+                            <li><a href="/pages/payroll-contract.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Payroll Contract Staffing</a></li>
+                            <li><a href="/pages/vendor-management.html" class="block px-4 py-2 hover:bg-gray-100">Vendor
+                                    management</a></li>
+                            <li><a href="/pages/assessment-testing.html" class="block px-4 py-2 hover:bg-gray-100">Assessment &
+                                    Testing</a></li>
+                            <li><a href="/pages/executive-retained.html" class="block px-4 py-2 hover:bg-gray-100">Executive
+                                    Search/Retained Search</a></li>
+                            <li><a href="/pages/payroll-outsourcing.html" class="block px-4 py-2 hover:bg-gray-100">Payroll
+                                    Outsourcing/HR Services</a></li>
+                            <li><a href="/pages/training.html" class="block px-4 py-2 hover:bg-gray-100">Training</a>
+                            </li>
+                            <li><a href="/pages/student-recruitment.html" class="block px-4 py-2 hover:bg-gray-100">Student
+                                    Recruitment</a></li>
+                        </ul>
+                    </div>
+                </div>
+
                 <a href="#contact" class="hover:text-[#500000] transition">Contact</a>
             </nav>
-            <!-- Hamburger shown on anything smaller than md -->
+
+            <!-- Hamburger -->
             <button id="menu-btn" class="md:hidden inline-flex p-2 rounded-md hover:bg-[#fceaea] transition">
                 <i data-lucide="menu" class="w-8 h-8 text-[#720000]"></i>
             </button>
@@ -87,7 +118,6 @@
     </div>
     <div class="h-[104px]"></div>
     <!-- Navbar end -->
-
 
 
     <!-- Mobile Sidebar Menu start -->
@@ -102,16 +132,45 @@
             </div>
 
             <!-- Main nav links -->
-            <nav class="flex flex-col px-8 py-10 gap-12 text-lg font-semibold text-gray-800">
-                <a href="#about" onclick="toggleMenu()"
-                    class="hover:text-[#720000] transition-all duration-200">About</a>
-                <a href="#products" onclick="toggleMenu()"
-                    class="hover:text-[#720000] transition-all duration-200">Products</a>
-                <a href="#contact" onclick="toggleMenu()"
-                    class="hover:text-[#720000] transition-all duration-200">Contact</a>
+            <nav class="flex flex-col px-8 py-10 gap-6 text-lg font-semibold text-gray-800">
+                <a href="#home" onclick="toggleMenu()" class="hover:text-[#720000] transition">Home</a>
+
+                <!-- Services accordion (mobile) -->
+                <div class="space-y-2">
+                    <button onclick="toggleServices()"
+                        class="flex justify-between items-center w-full text-left hover:text-[#720000] transition">
+                        <span>Services</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform" id="services-icon"></i>
+                    </button>
+                    <div id="services-list"
+                        class="hidden p-4 border flex flex-col gap-3 text-base font-normal text-gray-700">
+                        <a href="/pages/permanent-staffing.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Permanent Staffing</a>
+                        <a href="/pages/payroll-contract.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Payroll Contract Staffing</a>
+                        <a href="/pages/vendor-management.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Vendor management</a>
+                        <a href="/pages/assessment-testing.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Assessment
+                            & Testing</a>
+                        <a href="/pages/assessment.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Executive
+                            Search/Retained Search</a>
+                        <a href="/pages/executive-retained.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Payroll
+                            Outsourcing/HR Services</a>
+                        <a href="/pages/training.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Training</a>
+                        <a href="/pages/student-recruitment.html"
+                            class="hover:text-[#720000] border-b border-gray-200 pb-2">Student
+                            Recruitment</a>
+                    </div>
+                </div>
+
+                <a href="#contact" onclick="toggleMenu()" class="hover:text-[#720000] transition">Contact Us</a>
             </nav>
 
-            <!-- Info bar at bottom styled as card -->
+            <!-- Info bar at bottom -->
             <div class="mt-auto bg-[#720000]/10 p-6 mx-6 mb-6 rounded-xl shadow-md text-gray-900 space-y-5">
                 <div class="flex items-center gap-3">
                     <i data-lucide="map-pin" class="w-5 h-5 text-[#720000]"></i>
@@ -391,8 +450,10 @@
                     <a href="/pages/vendor-management.html">
                         <div
                             class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                            <i data-lucide="user-check" class="text-red-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
-                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                            <i data-lucide="user-check"
+                                class="text-red-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
+                            <p
+                                class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                                 Vendor management Services
                             </p>
                         </div>
@@ -405,8 +466,10 @@
                     <a href="/pages/executive-retained.html">
                         <div
                             class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                            <i data-lucide="globe" class="text-indigo-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
-                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                            <i data-lucide="globe"
+                                class="text-indigo-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
+                            <p
+                                class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                                 Executive Search/Retained Search
                             </p>
                         </div>
@@ -418,8 +481,10 @@
                     <a href="#">
                         <div
                             class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                            <i data-lucide="star" class="text-purple-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white transition-colors duration-500 group-hover:text-white"></i>
-                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                            <i data-lucide="star"
+                                class="text-purple-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white transition-colors duration-500 group-hover:text-white"></i>
+                            <p
+                                class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                                 Payroll Outsourcing/HR Services
                             </p>
                         </div>
@@ -431,8 +496,10 @@
                     <a href="/pages/assessment-testing.html">
                         <div
                             class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                            <i data-lucide="award" class="text-teal-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
-                            <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                            <i data-lucide="award"
+                                class="text-teal-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
+                            <p
+                                class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                                 Assessment & Testing Services
                             </p>
                         </div>
@@ -443,8 +510,10 @@
                 <div class="row-span-1 p-[2px] rounded-3xl animated-border" data-aos="fade-up" data-aos-delay="600">
                     <div
                         class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                        <i data-lucide="lightbulb" class="text-orange-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
-                        <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                        <i data-lucide="lightbulb"
+                            class="text-orange-500 text-5xl mb-3 transition-colors duration-500 group-hover:text-white"></i>
+                        <p
+                            class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                             Training
                         </p>
                     </div>
@@ -455,8 +524,10 @@
                     data-aos-delay="700">
                     <div
                         class="group bg-white rounded-3xl flex flex-col items-center justify-center p-6 h-full transition-all duration-500 hover:bg-gradient-to-br hover:from-[#720000] hover:via-[#4d0000] hover:to-[#004aad]">
-                        <i data-lucide="book" class="text-green-600 text-5xl mb-2 transition-colors duration-500 group-hover:text-white"></i>
-                        <p class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
+                        <i data-lucide="book"
+                            class="text-green-600 text-5xl mb-2 transition-colors duration-500 group-hover:text-white"></i>
+                        <p
+                            class="text-gray-800 font-bold text-lg sm:text-xl text-center transition-colors duration-500 group-hover:text-white">
                             Student Recruitment
                         </p>
                     </div>

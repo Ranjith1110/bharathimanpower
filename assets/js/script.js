@@ -40,6 +40,13 @@ window.addEventListener("scroll", () => {
 });
 document.body.style.overflowX = "hidden";
 
+function toggleServices() {
+    const list = document.getElementById("services-list");
+    const icon = document.getElementById("services-icon");
+    list.classList.toggle("hidden");
+    icon.classList.toggle("rotate-180");
+}
+
 // -- For toggle navbar end -- //
 
 
