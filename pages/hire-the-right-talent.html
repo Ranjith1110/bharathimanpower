@@ -22,6 +22,45 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <style>
+        #toast-container {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .toast {
+            min-width: 220px;
+            max-width: 360px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            opacity: 0;
+            transform: translateX(20px);
+            transition: transform 300ms ease, opacity 300ms ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            background: #16a34a;
+        }
+
+        .toast.error {
+            background: #dc2626;
+        }
+    </style>
 
 </head>
 
@@ -211,10 +250,12 @@
     <!-- Mobile Sidebar Menu end -->
 
 
+    <!-- Form start -->
     <section
         class="w-full py-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-[#eaf4ff] via-[#fff9f3] to-[#fbeee7] px-4">
         <div
             class="relative max-w-3xl w-full bg-white/95 shadow-2xl rounded-3xl px-8 py-12 md:p-16 border-t-8 border-[#004aad] overflow-hidden">
+
             <!-- Accent blobs -->
             <div
                 class="absolute -top-8 left-8 w-16 h-16 bg-gradient-to-br from-[#004aad]/30 to-[#720000]/20 rounded-full blur-xl">
@@ -222,6 +263,7 @@
             <div
                 class="absolute bottom-8 right-8 w-14 h-14 bg-gradient-to-tr from-[#720000]/15 to-[#004aad]/15 rounded-full blur-xl">
             </div>
+
             <div class="mb-8 text-center">
                 <h2
                     class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#004aad] to-[#720000] bg-clip-text text-transparent">
@@ -230,78 +272,84 @@
                 <p class="text-[#36537a] mt-1 text-base">Share your hiring needs to find the best-matched candidates
                     quickly!</p>
             </div>
-            <form class="space-y-7">
-                <!-- Row 1: Company, Contact Person -->
+
+            <form id="talentForm" class="space-y-7" action="../sendmail.php" method="POST">
+                <input type="hidden" name="formType" value="talent">
+                <!-- Row 1 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Company Name</label>
-                        <input type="text" required
+                        <input type="text" name="companyName" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                             placeholder="Company Name" />
                     </div>
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Contact Person Name</label>
-                        <input type="text" required
+                        <input type="text" name="contactPerson" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
                             placeholder="Hiring Manager" />
                     </div>
                 </div>
-                <!-- Row 2: Email, Phone -->
+
+                <!-- Row 2 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Email Address</label>
-                        <input type="email" required
+                        <input type="email" name="email" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                             placeholder="hr@company.com" />
                     </div>
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Phone Number</label>
-                        <input type="tel" required
+                        <input type="tel" name="phone" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
                             placeholder="Contact number" />
                     </div>
                 </div>
-                <!-- Row 3: Company Location, Position/Role -->
+
+                <!-- Row 3 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Location of Company</label>
-                        <input type="text" required
+                        <input type="text" name="companyLocation" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                             placeholder="City, State" />
                     </div>
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Position / Role to Hire</label>
-                        <input type="text" required
+                        <input type="text" name="jobRole" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
                             placeholder="e.g. Backend Developer" />
                     </div>
                 </div>
-                <!-- Row 4: Department, Vacancies -->
+
+                <!-- Row 4 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Department / Team</label>
-                        <input type="text" required
+                        <input type="text" name="department" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                             placeholder="e.g. IT, Operations" />
                     </div>
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Number of Vacancies</label>
-                        <input type="number" min="1" required
+                        <input type="number" name="vacancies" min="1" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
                             placeholder="Eg. 3" />
                     </div>
                 </div>
-                <!-- Row 5: Experience, Job Type -->
+
+                <!-- Row 5 -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Experience Required (Years)</label>
-                        <input type="number" min="0" max="45"
+                        <input type="number" name="experience" min="0" max="45"
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                             placeholder="e.g. 2 - 5" />
                     </div>
                     <div>
                         <label class="font-semibold text-[#004aad] mb-1 block">Job Type</label>
-                        <select
+                        <select name="jobType"
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none">
                             <option value="">Select</option>
                             <option value="Full-Time">Full-Time</option>
@@ -310,14 +358,16 @@
                         </select>
                     </div>
                 </div>
+
                 <!-- Additional Requirements -->
                 <div>
                     <label class="font-semibold text-[#004aad] mb-1 block">Additional Requirements / Message</label>
-                    <textarea rows="3"
+                    <textarea name="notes" rows="3"
                         class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
                         placeholder="Any specific requirements, skills, or details?"></textarea>
                 </div>
-                <!-- CTA -->
+
+                <!-- Submit -->
                 <button type="submit"
                     class="w-full mt-2 py-3 rounded-full bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-bold text-lg shadow-lg transition hover:opacity-90">
                     Submit
@@ -325,7 +375,11 @@
             </form>
         </div>
     </section>
+    <!-- Form end -->
 
+
+    <!-- Toast container -->
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
 
 
@@ -420,13 +474,72 @@
 
             <!-- Right side -->
             <div class="mt-2 sm:mt-0 font-vigi">
-                Developed by <a href="https://yourwebsite.com" class="text-[#720000] text-lg font-bold hover:text-white transition">VigilixHub</a>
+                Developed by <a href="https://yourwebsite.com"
+                    class="text-[#720000] text-lg font-bold hover:text-white transition">VigilixHub</a>
             </div>
         </div>
 
     </footer>
     <!-- Footer end -->
 
+
+    <!-- Form script start -->
+    <script>
+        window.showToast = function (message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            if (!container) {
+                const div = document.createElement('div');
+                div.id = 'toast-container';
+                Object.assign(div.style, { position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 });
+                document.body.appendChild(div);
+            }
+            const t = document.createElement('div');
+            t.className = 'toast ' + type;
+            t.innerText = message;
+            Object.assign(t.style, {
+                background: type === 'success' ? '#16a34a' : '#dc2626',
+                color: '#fff', padding: '12px 16px', marginTop: '10px',
+                borderRadius: '8px', fontSize: '14px', boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+                opacity: 0, transform: 'translateX(100px)', transition: 'all 0.4s ease'
+            });
+            document.getElementById('toast-container').appendChild(t);
+            setTimeout(() => { t.style.opacity = 1; t.style.transform = 'translateX(0)'; }, 100);
+            setTimeout(() => { t.style.opacity = 0; t.style.transform = 'translateX(100px)'; setTimeout(() => t.remove(), 400); }, 4000);
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('talentForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const originalText = submitBtn.innerText;
+
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
+
+                const fd = new FormData(form);
+                try {
+                    const res = await fetch(form.action, { method: 'POST', body: fd });
+                    const data = await res.json();
+
+                    if (data.status === 'success') {
+                        showToast(data.message, 'success');
+                        form.reset();
+                    } else {
+                        showToast(data.message, 'error');
+                    }
+                } catch (err) {
+                    showToast('Server error. Check console.', 'error');
+                    console.error(err);
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+    <!-- Form script end -->
 
 
     <!-- Swiper JS -->
