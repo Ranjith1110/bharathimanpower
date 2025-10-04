@@ -68,18 +68,37 @@ try {
         }
 
         $mail->Subject = "New Candidate Submission - $fullName";
-        $mail->Body = "
-            <h2>Candidate Information</h2>
-            <p><b>Full Name:</b> $fullName</p>
-            <p><b>Email:</b> $email</p>
-            <p><b>Phone:</b> $phone</p>
-            <p><b>Location:</b> $location</p>
-            <p><b>Job Role:</b> $jobRole</p>
-            <p><b>Industry:</b> $industry</p>
-            <p><b>Experience:</b> $experience years</p>
-            <p><b>Expected Salary:</b> $salary</p>
-            <p><b>Notes:</b> $notes</p>
-        ";
+        $mail->Body = '
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f6fafe; padding:20px;">
+        <tr>
+            <td align="left">
+            <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:10px; padding:20px; font-family: Arial, sans-serif; color:#333;">
+                <tr>
+                <td align="center" style="padding-bottom:20px;">
+                    <img src="https://yourdomain.com/assets/images/logo.png" alt="Logo" width="120" style="display:block;" />
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <h2 style="color:#004aad; text-align:center;">Candidate Information</h2>
+                    <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin-top:10px;">
+                    <tr><td style="font-weight:bold;">Full Name:</td><td>' . $fullName . '</td></tr>
+                    <tr><td style="font-weight:bold;">Email:</td><td>' . $email . '</td></tr>
+                    <tr><td style="font-weight:bold;">Phone:</td><td>' . $phone . '</td></tr>
+                    <tr><td style="font-weight:bold;">Location:</td><td>' . $location . '</td></tr>
+                    <tr><td style="font-weight:bold;">Job Role:</td><td>' . $jobRole . '</td></tr>
+                    <tr><td style="font-weight:bold;">Industry:</td><td>' . $industry . '</td></tr>
+                    <tr><td style="font-weight:bold;">Experience:</td><td>' . $experience . ' years</td></tr>
+                    <tr><td style="font-weight:bold;">Salary:</td><td>' . $salary . '</td></tr>
+                    <tr><td style="font-weight:bold;">Notes:</td><td>' . $notes . '</td></tr>
+                    </table>
+                    <p style="text-align:center; margin-top:20px; color:#720000;">Thank you for submitting your information!</p>
+                </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+        </table>';
     } elseif ($formType === 'talent') {
         // Talent Request Form
         $companyName   = trim($_POST['companyName'] ?? '');
@@ -100,20 +119,39 @@ try {
         }
 
         $mail->Subject = "New Talent Request - $companyName";
-        $mail->Body = "
-            <h2>Talent Request Information</h2>
-            <p><b>Company Name:</b> $companyName</p>
-            <p><b>Contact Person:</b> $contactPerson</p>
-            <p><b>Email:</b> $email</p>
-            <p><b>Phone:</b> $phone</p>
-            <p><b>Company Location:</b> $companyLocation</p>
-            <p><b>Position / Role to Hire:</b> $jobRole</p>
-            <p><b>Department / Team:</b> $department</p>
-            <p><b>Vacancies:</b> $vacancies</p>
-            <p><b>Experience Required:</b> $experience years</p>
-            <p><b>Job Type:</b> $jobType</p>
-            <p><b>Additional Notes:</b> $notes</p>
-        ";
+        $mail->Body = '
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f6fafe; padding:20px;">
+        <tr>
+            <td align="left">
+            <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:10px; padding:20px; font-family: Arial, sans-serif; color:#333;">
+                <tr>
+                <td align="center" style="padding-bottom:20px;">
+                    <img src="https://yourdomain.com/assets/images/logo.png" alt="Logo" width="120" style="display:block;" />
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <h2 style="color:#004aad; text-align:center;">Talent Request Information</h2>
+                    <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin-top:10px;">
+                    <tr><td style="font-weight:bold;">Company Name:</td><td>' . $companyName . '</td></tr>
+                    <tr><td style="font-weight:bold;">Contact Person:</td><td>' . $contactPerson . '</td></tr>
+                    <tr><td style="font-weight:bold;">Email:</td><td>' . $email . '</td></tr>
+                    <tr><td style="font-weight:bold;">Phone:</td><td>' . $phone . '</td></tr>
+                    <tr><td style="font-weight:bold;">Company Location:</td><td>' . $companyLocation . '</td></tr>
+                    <tr><td style="font-weight:bold;">Position / Role to Hire:</td><td>' . $jobRole . '</td></tr>
+                    <tr><td style="font-weight:bold;">Department / Team:</td><td>' . $department . '</td></tr>
+                    <tr><td style="font-weight:bold;">Vacancies:</td><td>' . $vacancies . '</td></tr>
+                    <tr><td style="font-weight:bold;">Experience Required:</td><td>' . $experience . ' years</td></tr>
+                    <tr><td style="font-weight:bold;">Job Type:</td><td>' . $jobType . '</td></tr>
+                    <tr><td style="font-weight:bold;">Additional Notes:</td><td>' . $notes . '</td></tr>
+                    </table>
+                    <p style="text-align:center; margin-top:20px; color:#720000;">Thank you for submitting your request!</p>
+                </td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+        </table>';
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Unknown form type.']);
         exit;
