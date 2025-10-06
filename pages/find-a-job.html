@@ -215,93 +215,88 @@
         class="w-full py-16 bg-gradient-to-br from-[#f6fafe] via-[#f7f3fa] to-[#fbeee7] px-4 md:px-0 flex justify-center items-center min-h-[80vh]">
         <div
             class="relative max-w-4xl w-full bg-white/80 backdrop-blur shadow-2xl rounded-3xl px-8 py-12 md:p-16 border-t-8 border-[#004aad]">
-            <!-- Decorative accent -->
-            <div
-                class="absolute -top-8 left-6 w-16 h-16 bg-gradient-to-br from-[#004aad]/30 to-[#720000]/20 rounded-full blur-xl -z-10">
-            </div>
             <div class="mb-8 text-center">
                 <h2
                     class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#004aad] to-[#720000] bg-clip-text text-transparent">
-                    Candidate Info
-                </h2>
+                    Candidate Info</h2>
                 <p class="text-gray-700 mt-2 text-md">Fill in your details and we’ll help match you to the best job
                     opportunities.</p>
             </div>
-            <form class="space-y-6" enctype="multipart/form-data">
-                <!-- Full Name & Email Row -->
+            <form id="candidateForm" class="space-y-6" enctype="multipart/form-data" method="POST"
+                action="/sendmail.php">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Full Name</label>
-                        <input type="text" required
+                        <input type="text" name="fullName" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#004aad] focus:outline-none bg-white/70"
                             placeholder="Enter your full name" />
                     </div>
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Email Address</label>
-                        <input type="email" required
+                        <input type="email" name="email" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#720000] focus:outline-none bg-white/70"
                             placeholder="example@email.com" />
                     </div>
                 </div>
-                <!-- Phone & Location Row -->
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Phone Number</label>
-                        <input type="tel" required
+                        <input type="tel" name="phone" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#004aad] focus:outline-none bg-white/70"
                             placeholder="Your contact number" />
                     </div>
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Current Location</label>
-                        <input type="text" required
+                        <input type="text" name="location" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#720000] focus:outline-none bg-white/70"
                             placeholder="City, State" />
                     </div>
                 </div>
-                <!-- Resume Upload & Job Role -->
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Resume Upload</label>
-                        <input type="file" accept=".pdf,.doc,.docx" required
+                        <input type="file" name="resume" accept=".pdf,.doc,.docx" required
                             class="block w-full text-sm text-gray-800 border border-gray-200 rounded-lg cursor-pointer bg-white/70 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-[#004aad]/80 file:text-white file:font-medium hover:file:bg-[#720000]/80" />
                     </div>
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Desired Job Role / Position</label>
-                        <input type="text" required
+                        <input type="text" name="jobRole" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#004aad] focus:outline-none bg-white/70"
                             placeholder="E.g. Web Developer, HR Manager" />
                     </div>
                 </div>
-                <!-- Industry, Experience, Salary -->
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Industry / Field</label>
-                        <input type="text" required
+                        <input type="text" name="industry" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#720000] focus:outline-none bg-white/70"
                             placeholder="E.g. IT, Finance, Sales" />
                     </div>
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Experience (Years)</label>
-                        <input type="number" min="0" max="50" required
+                        <input type="number" name="experience" min="0" max="50" required
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#004aad] focus:outline-none bg-white/70"
                             placeholder="Eg. 5" />
                     </div>
                     <div>
                         <label class="font-semibold block mb-1 text-[#004aad]">Expected Salary / CTC <span
                                 class="text-gray-500 text-xs">(optional)</span></label>
-                        <input type="text"
+                        <input type="text" name="salary"
                             class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#720000] focus:outline-none bg-white/70"
                             placeholder="Eg. ₹8 LPA" />
                     </div>
                 </div>
-                <!-- Additional Notes -->
+
                 <div>
                     <label class="font-semibold block mb-1 text-[#004aad]">Additional Notes / Message</label>
-                    <textarea rows="3"
+                    <textarea name="notes" rows="3"
                         class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-[#004aad] focus:outline-none bg-white/70"
                         placeholder="Anything else you'd like us to know?"></textarea>
                 </div>
-                <!-- CTA -->
+
                 <button type="submit"
                     class="w-full py-3 rounded-full bg-gradient-to-r from-[#004aad] to-[#720000] shadow-lg text-white font-bold text-lg transition hover:opacity-90">
                     Submit
@@ -309,7 +304,6 @@
             </form>
         </div>
     </section>
-
 
 
     <!-- Footer start -->
@@ -403,14 +397,13 @@
 
             <!-- Right side -->
             <div class="mt-2 sm:mt-0 font-vigi">
-                Developed by <a href="https://yourwebsite.com" class="text-[#720000] text-lg font-bold hover:text-white transition">VigilixHub</a>
+                Developed by <a href="https://yourwebsite.com"
+                    class="text-[#720000] text-lg font-bold hover:text-white transition">VigilixHub</a>
             </div>
         </div>
 
     </footer>
     <!-- Footer end -->
-
-
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
