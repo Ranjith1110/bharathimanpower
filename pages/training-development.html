@@ -22,45 +22,6 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <style>
-        #toast-container {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            z-index: 99999;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 8px;
-        }
-
-        .toast {
-            min-width: 220px;
-            max-width: 360px;
-            padding: 12px 16px;
-            border-radius: 10px;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-            opacity: 0;
-            transform: translateX(20px);
-            transition: transform 300ms ease, opacity 300ms ease;
-        }
-
-        .toast.show {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .toast.success {
-            background: #16a34a;
-        }
-
-        .toast.error {
-            background: #dc2626;
-        }
-    </style>
 
 </head>
 
@@ -250,136 +211,164 @@
     <!-- Mobile Sidebar Menu end -->
 
 
-    <!-- Form start -->
+
     <section
-        class="w-full py-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-[#eaf4ff] via-[#fff9f3] to-[#fbeee7] px-4">
+        class="relative w-full bg-gradient-to-br from-[#eaf4ff] via-[#fff9f3] to-[#fbeee7] py-16 md:py-24 px-4 md:px-10 overflow-hidden">
+        <!-- Accent blobs -->
         <div
-            class="relative max-w-3xl w-full bg-white/95 shadow-2xl rounded-3xl px-8 py-12 md:p-16 border-t-8 border-[#004aad] overflow-hidden">
+            class="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[#004aad]/30 to-[#720000]/20 rounded-full blur-3xl -z-10">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-[20rem] h-[20rem] bg-gradient-to-tr from-[#720000]/10 to-[#004aad]/10 rounded-full blur-2xl -z-10">
+        </div>
 
-            <!-- Accent blobs -->
-            <div
-                class="absolute -top-8 left-8 w-16 h-16 bg-gradient-to-br from-[#004aad]/30 to-[#720000]/20 rounded-full blur-xl">
-            </div>
-            <div
-                class="absolute bottom-8 right-8 w-14 h-14 bg-gradient-to-tr from-[#720000]/15 to-[#004aad]/15 rounded-full blur-xl">
+        <div class="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Image Left -->
+            <div class="relative group" data-aos="fade-right">
+                <img src="/assets/images/we-do.png" alt="Training & Development Banner"
+                    class="rounded-2xl shadow-2xl object-cover w-full h-[300px] md:h-[500px] transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#004aad]/40 to-[#720000]/40 rounded-full blur-xl">
+                </div>
             </div>
 
-            <div class="mb-8 text-center">
-                <h2
-                    class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#004aad] to-[#720000] bg-clip-text text-transparent">
-                    Talent Request Form
+            <!-- Content Right -->
+            <div class="text-center md:text-left" data-aos="fade-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                    Training & Development
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800 mb-6">
+                    Empowering People, Elevating Performance
                 </h2>
-                <p class="text-[#36537a] mt-1 text-base">Share your hiring needs to find the best-matched candidates
-                    quickly!</p>
+                <p class="text-lg md:text-xl text-gray-700 mb-6">
+                    A skilled and motivated workforce is the foundation of every successful organization. Continuous
+                    learning not only enhances productivity but also drives innovation, engagement, and long-term
+                    growth. At Bharathi Manpower, our programs equip your team with the skills, knowledge, and mindset
+                    needed to excel in today's dynamic business environment.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 mb-6">
+                    We deliver customized training solutions that align with your company goals and workforce needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="/contact-us"
+                        class="px-6 py-3 rounded-full bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-semibold shadow hover:opacity-90 transition">
+                        Contact Us
+                    </a>
+                    <a href="/request-consultation"
+                        class="px-6 py-3 rounded-full border border-[#004aad] text-[#004aad] font-semibold hover:bg-[#004aad] hover:text-white transition">
+                        Request a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto relative z-10 mt-20">
+            <!-- Benefits Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="bg-white rounded-2xl border-t-4 border-[#004aad] shadow-lg p-8 text-center flex flex-col items-center">
+                    <h3 class="text-xl font-bold text-[#004aad] mb-2">Tailored Learning Solutions</h3>
+                    <p class="text-gray-600 mb-2">
+                        Training programs are crafted for your specific industry, job roles, and performance objectives.
+                    </p>
+                    <span class="text-gray-500 text-sm">Direct business impact</span>
+                </div>
+                <div
+                    class="bg-white rounded-2xl border-t-4 border-[#720000] shadow-lg p-8 text-center flex flex-col items-center">
+                    <h3 class="text-xl font-bold text-[#720000] mb-2">Expert Trainers & Facilitators</h3>
+                    <p class="text-gray-600 mb-2">
+                        Sessions led by industry professionals and certified trainers delivering practical knowledge.
+                    </p>
+                    <span class="text-gray-500 text-sm">Real-world insights</span>
+                </div>
+                <div
+                    class="bg-white rounded-2xl border-t-4 border-[#004aad] shadow-lg p-8 text-center flex flex-col items-center">
+                    <h3 class="text-xl font-bold text-[#004aad] mb-2">Comprehensive Training Areas</h3>
+                    <p class="text-gray-600 mb-2">
+                        Covering technical, leadership, compliance, communication, and soft skills for all-round
+                        development.
+                    </p>
+                    <span class="text-gray-500 text-sm">Upskill with confidence</span>
+                </div>
             </div>
 
-            <form id="talentForm" class="space-y-7" action="../sendmail.php" method="POST">
-                <input type="hidden" name="formType" value="talent">
-                <!-- Row 1 -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Company Name</label>
-                        <input type="text" name="companyName" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                            placeholder="Company Name" />
+            <!-- Additional Highlights -->
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-3 mb-14">
+                <div class="bg-white rounded-2xl border-t-4 border-[#004aad] shadow-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-[#004aad] mb-2">Blended Learning Approach</h3>
+                    <p class="text-gray-600 mb-2">
+                        Experience classroom, e-learning, simulations, and on-the-job training for maximum retention.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl border-t-4 border-[#720000] shadow-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-[#720000] mb-2">Measurable Outcomes</h3>
+                    <p class="text-gray-600 mb-2">
+                        Post-training evaluation and feedback measure effectiveness and ROI for your investment.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl border-t-4 border-[#004aad] shadow-lg p-8 text-center">
+                    <h3 class="text-xl font-bold text-[#004aad] mb-2">Continuous Development Culture</h3>
+                    <p class="text-gray-600">
+                        We nurture a learning-driven environment to support ongoing growth, engagement, and retention.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Training Process -->
+            <div class="mb-14">
+                <h4 class="text-xl font-semibold mb-10 text-[#004aad] text-center">
+                    Our Training & Development Process
+                </h4>
+                <div class="relative flex flex-col md:flex-row justify-center items-center gap-10 md:gap-14">
+                    <div class="hidden md:block absolute top-5 left-0 w-full h-0.5 bg-gray-200 z-0"></div>
+
+                    <div class="flex flex-col items-center z-10">
+                        <div
+                            class="bg-[#004aad] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-lg shadow-md mb-3">
+                            1
+                        </div>
+                        <span class="font-semibold text-gray-800 text-center max-w-[150px]">Needs Analysis</span>
                     </div>
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Contact Person Name</label>
-                        <input type="text" name="contactPerson" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
-                            placeholder="Hiring Manager" />
+
+                    <div class="flex flex-col items-center z-10">
+                        <div
+                            class="bg-[#720000] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-lg shadow-md mb-3">
+                            2
+                        </div>
+                        <span class="font-semibold text-gray-800 text-center max-w-[150px]">Program Design</span>
+                    </div>
+
+                    <div class="flex flex-col items-center z-10">
+                        <div
+                            class="bg-orange-500 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-lg shadow-md mb-3">
+                            3
+                        </div>
+                        <span class="font-semibold text-gray-800 text-center max-w-[150px]">Delivery</span>
+                    </div>
+
+                    <div class="flex flex-col items-center z-10">
+                        <div
+                            class="bg-[#004aad] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-lg shadow-md mb-3">
+                            4
+                        </div>
+                        <span class="font-semibold text-gray-800 text-center max-w-[150px]">Evaluation</span>
+                    </div>
+
+                    <div class="flex flex-col items-center z-10">
+                        <div
+                            class="bg-[#720000] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-lg shadow-md mb-3">
+                            5
+                        </div>
+                        <span class="font-semibold text-gray-800 text-center max-w-[150px]">Follow-Up & Support</span>
                     </div>
                 </div>
-
-                <!-- Row 2 -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Email Address</label>
-                        <input type="email" name="email" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                            placeholder="hr@company.com" />
-                    </div>
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Phone Number</label>
-                        <input type="tel" name="phone" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
-                            placeholder="Contact number" />
-                    </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Location of Company</label>
-                        <input type="text" name="companyLocation" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                            placeholder="City, State" />
-                    </div>
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Position / Role to Hire</label>
-                        <input type="text" name="jobRole" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
-                            placeholder="e.g. Backend Developer" />
-                    </div>
-                </div>
-
-                <!-- Row 4 -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Department / Team</label>
-                        <input type="text" name="department" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                            placeholder="e.g. IT, Operations" />
-                    </div>
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Number of Vacancies</label>
-                        <input type="number" name="vacancies" min="1" required
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none"
-                            placeholder="Eg. 3" />
-                    </div>
-                </div>
-
-                <!-- Row 5 -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Experience Required (Years)</label>
-                        <input type="number" name="experience" min="0" max="45"
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                            placeholder="e.g. 2 - 5" />
-                    </div>
-                    <div>
-                        <label class="font-semibold text-[#004aad] mb-1 block">Job Type</label>
-                        <select name="jobType"
-                            class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#720000] focus:outline-none">
-                            <option value="">Select</option>
-                            <option value="Full-Time">Full-Time</option>
-                            <option value="Part-Time">Part-Time</option>
-                            <option value="Contract">Contract</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Additional Requirements -->
-                <div>
-                    <label class="font-semibold text-[#004aad] mb-1 block">Additional Requirements / Message</label>
-                    <textarea name="notes" rows="3"
-                        class="w-full rounded-lg border border-gray-200 px-4 py-3 bg-white/90 focus:ring-2 focus:ring-[#004aad] focus:outline-none"
-                        placeholder="Any specific requirements, skills, or details?"></textarea>
-                </div>
-
-                <!-- Submit -->
-                <button type="submit"
-                    class="w-full mt-2 py-3 rounded-full bg-gradient-to-r from-[#004aad] to-[#720000] text-white font-bold text-lg shadow-lg transition hover:opacity-90">
-                    Submit
-                </button>
-            </form>
+            </div>
         </div>
     </section>
-    <!-- Form end -->
 
 
-    <!-- Toast container -->
-    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+
 
 
 
@@ -483,64 +472,6 @@
     <!-- Footer end -->
 
 
-    <!-- Form script start -->
-    <script>
-        window.showToast = function (message, type = 'success') {
-            const container = document.getElementById('toast-container');
-            if (!container) {
-                const div = document.createElement('div');
-                div.id = 'toast-container';
-                Object.assign(div.style, { position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 });
-                document.body.appendChild(div);
-            }
-            const t = document.createElement('div');
-            t.className = 'toast ' + type;
-            t.innerText = message;
-            Object.assign(t.style, {
-                background: type === 'success' ? '#16a34a' : '#dc2626',
-                color: '#fff', padding: '12px 16px', marginTop: '10px',
-                borderRadius: '8px', fontSize: '14px', boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-                opacity: 0, transform: 'translateX(100px)', transition: 'all 0.4s ease'
-            });
-            document.getElementById('toast-container').appendChild(t);
-            setTimeout(() => { t.style.opacity = 1; t.style.transform = 'translateX(0)'; }, 100);
-            setTimeout(() => { t.style.opacity = 0; t.style.transform = 'translateX(100px)'; setTimeout(() => t.remove(), 400); }, 4000);
-        };
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('talentForm');
-            const submitBtn = form.querySelector('button[type="submit"]');
-
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const originalText = submitBtn.innerText;
-
-                submitBtn.innerText = 'Sending...';
-                submitBtn.disabled = true;
-
-                const fd = new FormData(form);
-                try {
-                    const res = await fetch(form.action, { method: 'POST', body: fd });
-                    const data = await res.json();
-
-                    if (data.status === 'success') {
-                        showToast(data.message, 'success');
-                        form.reset();
-                    } else {
-                        showToast(data.message, 'error');
-                    }
-                } catch (err) {
-                    showToast('Server error. Check console.', 'error');
-                    console.error(err);
-                } finally {
-                    submitBtn.innerText = originalText;
-                    submitBtn.disabled = false;
-                }
-            });
-        });
-    </script>
-    <!-- Form script end -->
-
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -565,6 +496,66 @@
                 }
             }
         }
+    </script>
+    <script>
+
+        // -- Swiper for industry section start -- //
+
+        new Swiper('.industry-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 18,
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 18 },     // Mobile (≤ 640px): 2 cards
+                768: { slidesPerView: 4, spaceBetween: 22 },     // iPad/Tablet (≥ 768px): 4 cards
+                1200: { slidesPerView: 6, spaceBetween: 24 },    // Desktop/Large (≥ 1200px): 6 cards
+            },
+            loop: true,
+            autoplay: { delay: 1700, disableOnInteraction: false },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+
+        // -- Swiper for industry section end -- //
+
+        // -- Counter Animation Start -- //
+
+        function animateCounter(counter) {
+            const target = +counter.getAttribute("data-target");
+            const duration = 2000; // animation duration (ms)
+            const step = target / (duration / 16);
+
+            let count = 0;
+            function updateCounter() {
+                count += step;
+                if (count < target) {
+                    counter.innerText = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            }
+            updateCounter();
+        }
+
+        // Trigger when section is visible
+        const counters = document.querySelectorAll(".counter");
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        obs.unobserve(entry.target); // run only once
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        counters.forEach(counter => observer.observe(counter));
+
+        // -- Counter Animation End -- //
     </script>
 
 
