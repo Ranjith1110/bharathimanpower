@@ -409,10 +409,9 @@
                 <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
                 <ul class="space-y-3 text-gray-300">
                     <li><a href="#about" class="hover:text-[#fceaea] transition">About Us</a></li>
-                    <li><a href="#services" class="hover:text-[#fceaea] transition">Services</a></li>
-                    <li><a href="#products" class="hover:text-[#fceaea] transition">Products</a></li>
                     <li><a href="#contact" class="hover:text-[#fceaea] transition">Contact</a></li>
-                    <li><a href="/privacy-policy" class="hover:text-[#fceaea] transition">Privacy Policy</a></li>
+                    <li><a href="/pages//privacy-policy.html" class="hover:text-[#fceaea] transition">Privacy Policy</a></li>
+                    <li><a href="/pages/terms-conditions.html" class="hover:text-[#fceaea] transition">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -463,7 +462,7 @@
 
             <!-- Right side -->
             <div class="mt-2 sm:mt-0 font-vigi">
-                Developed by <a href="https://yourwebsite.com"
+                Developed by <a href="https://www.vigilixhub.in/"
                     class="text-[#720000] text-lg font-bold hover:text-white transition">VigilixHub</a>
             </div>
         </div>
@@ -496,66 +495,6 @@
                 }
             }
         }
-    </script>
-    <script>
-
-        // -- Swiper for industry section start -- //
-
-        new Swiper('.industry-swiper', {
-            slidesPerView: 2,
-            spaceBetween: 18,
-            breakpoints: {
-                640: { slidesPerView: 2, spaceBetween: 18 },     // Mobile (≤ 640px): 2 cards
-                768: { slidesPerView: 4, spaceBetween: 22 },     // iPad/Tablet (≥ 768px): 4 cards
-                1200: { slidesPerView: 6, spaceBetween: 24 },    // Desktop/Large (≥ 1200px): 6 cards
-            },
-            loop: true,
-            autoplay: { delay: 1700, disableOnInteraction: false },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            }
-        });
-
-        // -- Swiper for industry section end -- //
-
-        // -- Counter Animation Start -- //
-
-        function animateCounter(counter) {
-            const target = +counter.getAttribute("data-target");
-            const duration = 2000; // animation duration (ms)
-            const step = target / (duration / 16);
-
-            let count = 0;
-            function updateCounter() {
-                count += step;
-                if (count < target) {
-                    counter.innerText = Math.floor(count);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            }
-            updateCounter();
-        }
-
-        // Trigger when section is visible
-        const counters = document.querySelectorAll(".counter");
-        const observer = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounter(entry.target);
-                        obs.unobserve(entry.target); // run only once
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        counters.forEach(counter => observer.observe(counter));
-
-        // -- Counter Animation End -- //
     </script>
 
 
