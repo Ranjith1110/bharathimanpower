@@ -134,6 +134,10 @@ function attachContactFormListener() {
                 } else {
                     formStatus.style.color = '#8B0000';
                 }
+
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                }, 4000);
             })
             .catch(error => {
                 formStatus.textContent = 'A network error occurred. Please try again.';
