@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bharathi Manpower | Global Staffing & Recruitment Solutions</title>
 
-    <meta name="description" content="Bharathi Manpower is a trusted global staffing and recruitment agency. We provide end-to-end workforce solutions, including permanent staffing, payroll outsourcing, and executive search to connect top talent with leading companies.">
-    <meta name="keywords" content="manpower, staffing solutions, recruitment agency, HR services, payroll outsourcing, executive search, job agency, talent acquisition, Bharathi Manpower, Chennai">
+    <meta name="description"
+        content="Bharathi Manpower is a trusted global staffing and recruitment agency. We provide end-to-end workforce solutions, including permanent staffing, payroll outsourcing, and executive search to connect top talent with leading companies.">
+    <meta name="keywords"
+        content="manpower, staffing solutions, recruitment agency, HR services, payroll outsourcing, executive search, job agency, talent acquisition, Bharathi Manpower, Chennai">
     <meta name="author" content="VigilixHub">
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://bharathimanpowers.com/" /> <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="canonical" href="https://bharathimanpowers.com/" />
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <meta property="og:title" content="Bharathi Manpower | Global Staffing & Recruitment Solutions" />
-    <meta property="og:description" content="A trusted global staffing agency providing end-to-end workforce solutions to connect top talent with leading companies." />
+    <meta property="og:description"
+        content="A trusted global staffing agency providing end-to-end workforce solutions to connect top talent with leading companies." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bharathimanpowers.com/" /> <meta property="og:image" content="https://bharathimanpowers.com/assets/images/banner-1.webp" /> <meta property="og:site_name" content="Bharathi Manpower" />
+    <meta property="og:url" content="https://bharathimanpowers.com/" />
+    <meta property="og:image" content="https://bharathimanpowers.com/assets/images/banner-1.webp" />
+    <meta property="og:site_name" content="Bharathi Manpower" />
     <meta property="og:locale" content="en_IN" />
 
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bharathi Manpower | Global Staffing & Recruitment Solutions">
-    <meta name="twitter:description" content="A trusted global staffing agency providing end-to-end workforce solutions to connect top talent with leading companies.">
-    <meta name="twitter:image" content="https://bharathimanpowers.com/assets/images/banner-1.webp"> <meta name="twitter:site" content="@YourTwitterHandle"> <meta name="theme-color" content="#004aad">
+    <meta name="twitter:description"
+        content="A trusted global staffing agency providing end-to-end workforce solutions to connect top talent with leading companies.">
+    <meta name="twitter:image" content="https://bharathimanpowers.com/assets/images/banner-1.webp">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+    <meta name="theme-color" content="#004aad">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -893,15 +902,19 @@
                 <p class="text-gray-300 leading-relaxed">
                     We’re happy to help and will respond within 24 hours.
                 </p>
-                <form class="flex flex-col space-y-4 mt-4"
-                    onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="text" required placeholder=" Drop us a line!"
+                <form id="contactForm" class="flex flex-col space-y-4 mt-4">
+
+                    <input type="hidden" name="formType" value="contact">
+
+                    <input type="text" name="message" required placeholder="Drop us a line!"
                         class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#fceaea] text-gray-900" />
+
                     <button type="submit"
                         class="bg-[#fceaea] text-[#720000] font-semibold px-4 py-3 rounded-lg hover:bg-white hover:text-[#004aad] transition">
-                        Drop It
+                        Drop It
                     </button>
                 </form>
+                <div id="form-status" class="mt-4 text-center font-semibold"></div>
             </div>
         </div>
 
@@ -923,6 +936,45 @@
     <!-- Footer end -->
 
 
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    formStatus.textContent = data.message;
+
+                    if (data.status === 'success') {
+                        formStatus.style.color = 'green';
+                        contactForm.reset();
+                    } else {
+                        formStatus.style.color = 'red';
+                    }
+                })
+                .catch(error => {
+                    formStatus.textContent = 'A network error occurred. Please try again.';
+                    formStatus.style.color = 'red';
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    submitButton.textContent = 'Drop It';
+                    submitButton.disabled = false;
+                });
+        });
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

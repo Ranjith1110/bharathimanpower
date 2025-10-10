@@ -449,13 +449,16 @@
                 <p class="text-gray-300 leading-relaxed">
                     We’re happy to help and will respond within 24 hours.
                 </p>
-                <form class="flex flex-col space-y-4 mt-4"
-                    onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="text" required placeholder=" Drop us a line!"
+                <form id="contactForm" class="flex flex-col space-y-4 mt-4">
+
+                    <input type="hidden" name="formType" value="contact">
+
+                    <input type="text" name="message" required placeholder="Drop us a line!"
                         class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#fceaea] text-gray-900" />
+
                     <button type="submit"
                         class="bg-[#fceaea] text-[#720000] font-semibold px-4 py-3 rounded-lg hover:bg-white hover:text-[#004aad] transition">
-                        Drop It
+                        Drop It
                     </button>
                 </form>
             </div>
