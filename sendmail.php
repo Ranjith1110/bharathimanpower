@@ -34,14 +34,14 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'ranjithram878@gmail.com';  // SMTP username
-    $mail->Password   = 'efbi okbd pxtp zexw';      // App password
+    $mail->Username   = 'hr@bharathimanpowers.com';
+    $mail->Password   = 'bwff xkbu oqsp stte';      // App password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
     // From & To
-    $mail->setFrom('ranjithram878@gmail.com', 'Website Forms');
-    $mail->addAddress('ranjithram878@gmail.com');
+    $mail->setFrom('hr@bharathimanpowers.com', 'Website Forms');
+    $mail->addAddress('hr@bharathimanpowers.com');
 
     $mail->isHTML(true);
 
