@@ -74,13 +74,13 @@ try {
             <td align="left">
             <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:10px; padding:20px; font-family: Arial, sans-serif; color:#333;">
                 <tr>
-                <td align="center" style="padding-bottom:20px;">
+                <td style="padding-bottom:10px;">
                     <img src="https://bharathimanpowers.com/assets/images/logo.png" alt="Logo" width="120" style="display:block;" />
                 </td>
                 </tr>
                 <tr>
                 <td>
-                    <h2 style="color:#004aad; text-align:center;">Candidate Information</h2>
+                    <h2 style="color:#004aad;">Candidate Information</h2>
                     <table width="100%" cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin-top:10px;">
                     <tr><td style="font-weight:bold;">Full Name:</td><td>' . $fullName . '</td></tr>
                     <tr><td style="font-weight:bold;">Email:</td><td>' . $email . '</td></tr>
@@ -92,7 +92,7 @@ try {
                     <tr><td style="font-weight:bold;">Salary:</td><td>' . $salary . '</td></tr>
                     <tr><td style="font-weight:bold;">Notes:</td><td>' . $notes . '</td></tr>
                     </table>
-                    <p style="text-align:center; margin-top:20px; color:#720000;">Thank you for submitting your information!</p>
+                    <p style="margin-top:20px; color:#720000; font-weight:bold;">Thank you for submitting your information!</p>
                 </td>
                 </tr>
             </table>
