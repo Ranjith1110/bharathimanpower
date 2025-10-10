@@ -75,7 +75,7 @@ try {
             <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:10px; padding:20px; font-family: Arial, sans-serif; color:#333;">
                 <tr>
                 <td align="center" style="padding-bottom:20px;">
-                    <img src="https://yourdomain.com/assets/images/logo.png" alt="Logo" width="120" style="display:block;" />
+                    <img src="https://bharathimanpowers.com/assets/images/logo.png" alt="Logo" width="120" style="display:block;" />
                 </td>
                 </tr>
                 <tr>
