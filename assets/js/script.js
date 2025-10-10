@@ -50,6 +50,9 @@ function toggleServices() {
 // -- For toggle navbar end -- //
 
 
+// -- Swiper start -- //
+
+
 var swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: {
@@ -65,5 +68,86 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+
+// -- Swiper end -- //
+
+
+// -- FooterPlaceholder start -- //
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+
+    if (footerPlaceholder) {
+        fetch('/footer.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
+            .then(data => {
+                footerPlaceholder.innerHTML = data;
+
+                lucide.createIcons();
+
+                attachContactFormListener();
+            })
+            .catch(error => {
+                console.error('Error fetching the footer:', error);
+                footerPlaceholder.innerHTML = '<p style="text-align:center; color:red;">Could not load footer.</p>';
+            });
+    }
+});
+
+
+// -- FooterPlaceholder end -- //
+
+
+// -- ContactForm start -- //
+
+
+function attachContactFormListener() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+
+    if (!contactForm) {
+        return;
+    }
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        fetch('/sendmail.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                formStatus.textContent = data.message;
+                if (data.status === 'success') {
+                    formStatus.style.color = '#006400';
+                    contactForm.reset();
+                } else {
+                    formStatus.style.color = '#8B0000';
+                }
+            })
+            .catch(error => {
+                formStatus.textContent = 'A network error occurred. Please try again.';
+                formStatus.style.color = '#8B0000';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
+    });
+}
+
+
+// -- ContactForm end -- //
 
 
