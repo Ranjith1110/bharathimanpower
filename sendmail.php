@@ -43,7 +43,7 @@ try {
     $mail->setFrom('hr@bharathimanpowers.com', 'Website Forms');
     $mail->addAddress('hr@bharathimanpowers.com');
 
-    $mail->isHTML(true);
+    $mail->isHTML(true);    
 
     // --- NEW: Reusable Email Template Components ---
     $templateHeader = '
